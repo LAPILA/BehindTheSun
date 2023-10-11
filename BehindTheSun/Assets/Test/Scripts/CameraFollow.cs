@@ -4,53 +4,25 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-	public float FollowSpeed = 2f;
-	public Transform Target;
+    public Transform target;
 
-	// Transform of the camera to shake. Grabs the gameObject's transform
-	// if null.
-	private Transform camTransform;
+    public float smoothSpeed = 3;
+    public Vector2 offset;
+    public float limitMinX, limitMaxX, limitMinY, limitMaxY;
+    float cameraHalfWidth, cameraHalfHeight;
 
-	// How long the object should shake for.
-	public float shakeDuration = 0f;
+    private void Start()
+    {
+        cameraHalfWidth = Camera.main.aspect * Camera.main.orthographicSize;
+        cameraHalfHeight = Camera.main.orthographicSize;
+    }
 
-	// Amplitude of the shake. A larger value shakes the camera harder.
-	public float shakeAmount = 0.1f;
-	public float decreaseFactor = 1.0f;
-
-	Vector3 originalPos;
-
-	void Awake()
-	{
-		Cursor.visible = false;
-		if (camTransform == null)
-		{
-			camTransform = GetComponent(typeof(Transform)) as Transform;
-		}
-	}
-
-	void OnEnable()
-	{
-		originalPos = camTransform.localPosition;
-	}
-
-	private void Update()
-	{
-		Vector3 newPosition = Target.position;
-		newPosition.z = -10;
-		transform.position = Vector3.Slerp(transform.position, newPosition, FollowSpeed * Time.deltaTime);
-
-		if (shakeDuration > 0)
-		{
-			camTransform.localPosition = originalPos + Random.insideUnitSphere * shakeAmount;
-
-			shakeDuration -= Time.deltaTime * decreaseFactor;
-		}
-	}
-
-	public void ShakeCamera()
-	{
-		originalPos = camTransform.localPosition;
-		shakeDuration = 0.2f;
-	}
+    private void LateUpdate()
+    {
+        Vector3 desiredPosition = new Vector3(
+            Mathf.Clamp(target.position.x + offset.x, limitMinX + cameraHalfWidth, limitMaxX - cameraHalfWidth),   // X
+            Mathf.Clamp(target.position.y + offset.y, limitMinY + cameraHalfHeight, limitMaxY - cameraHalfHeight), // Y
+            -10);                                                                                                  // Z
+        transform.position = Vector3.Lerp(transform.position, desiredPosition, Time.deltaTime * smoothSpeed);
+    }
 }
