@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class CharacterController2D : MonoBehaviour
 {
+    static public CharacterController2D instance;
     private float horizontal;
     public float speed = 9f;
     public float jumpingPower = 50f;
@@ -10,6 +11,7 @@ public class CharacterController2D : MonoBehaviour
     private bool isRun = false;
     public bool isControl;
     private Animator animator;
+    public string currentMapName;
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
@@ -17,8 +19,16 @@ public class CharacterController2D : MonoBehaviour
 
     private void Start()
     {
+        if (instance == null) {
+            DontDestroyOnLoad(this.gameObject);
+            instance = this;
+        }
+        else{
+            Destroy(this.gameObject);
+        }
         animator = GetComponent<Animator>();
         isControl = true;
+        
     }
     void Update()
     {

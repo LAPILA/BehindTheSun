@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
+    static public CameraFollow instance;
     public Transform target;
 
     public float smoothSpeed = 3;
@@ -13,6 +14,13 @@ public class CameraFollow : MonoBehaviour
 
     private void Start()
     {
+        if (instance == null) {
+            DontDestroyOnLoad(this.gameObject);
+            instance = this;
+        }
+        else {
+            Destroy(this.gameObject);
+        }
         cameraHalfWidth = Camera.main.aspect * Camera.main.orthographicSize;
         cameraHalfHeight = Camera.main.orthographicSize;
     }
@@ -22,7 +30,7 @@ public class CameraFollow : MonoBehaviour
         Vector3 desiredPosition = new Vector3(
             Mathf.Clamp(target.position.x + offset.x, limitMinX + cameraHalfWidth, limitMaxX - cameraHalfWidth),   // X
             Mathf.Clamp(target.position.y + offset.y, limitMinY + cameraHalfHeight, limitMaxY - cameraHalfHeight), // Y
-            -10);                                                                                                  // Z
+            transform.position.z); // 카메라의 현재 Z 위치 사용
         transform.position = Vector3.Lerp(transform.position, desiredPosition, Time.deltaTime * smoothSpeed);
     }
 }

@@ -39,6 +39,7 @@ public class PlayerMove_epic : MonoBehaviour
 
     private void Start()
     {
+        DontDestroyOnLoad(this.gameObject);
         IsFacingRight = true;
     }
 

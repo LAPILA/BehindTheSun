@@ -108,7 +108,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -1967519378, guid: 490be3453fb25c34a9969039e393a429, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -132,7 +132,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 635b4eb0d021b744abc2cfecdee2d0e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 9
+  jumpingPower: 50
   isControl: 0
+  currentMapName: 
   rb: {fileID: 2985183960264670830}
   groundCheck: {fileID: 4103740349974351552}
   groundLayer:
