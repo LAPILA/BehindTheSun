@@ -3261,6 +3261,10 @@ PrefabInstance:
       value: dummy
       objectReference: {fileID: 0}
     - target: {fileID: 8734899761015617655, guid: 5e26733fe04dbfa4196d92f9d4ff6a83, type: 3}
+      propertyPath: isControl
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8734899761015617655, guid: 5e26733fe04dbfa4196d92f9d4ff6a83, type: 3}
       propertyPath: jumpingPower
       value: 25
       objectReference: {fileID: 0}

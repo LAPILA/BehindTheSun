@@ -15,7 +15,7 @@ public class StartPoint : MonoBehaviour
         Camera = FindObjectOfType<CameraFollow>();
 
         if (startPoint == Player.currentMapName) {
-            Camera.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, -20);
+            Camera.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, -12);
             Player.transform.position = this.transform.position;
         }
     }

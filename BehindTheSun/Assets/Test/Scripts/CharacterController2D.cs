@@ -1,5 +1,6 @@
 using UnityEditorInternal;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CharacterController2D : MonoBehaviour
 {
