@@ -979,8 +979,33 @@ PrefabInstance:
       propertyPath: shakeDuration
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1281777286840639869, guid: d975e66254b08984ab50d4c39dcb947f, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1281777286840639869, guid: d975e66254b08984ab50d4c39dcb947f, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1281777286840639869, guid: d975e66254b08984ab50d4c39dcb947f, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1281777286840639869, guid: d975e66254b08984ab50d4c39dcb947f, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4745125583257358827, guid: d975e66254b08984ab50d4c39dcb947f, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 879.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4745125583257358827, guid: d975e66254b08984ab50d4c39dcb947f, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 418
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 2711232285775717651, guid: d975e66254b08984ab50d4c39dcb947f, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d975e66254b08984ab50d4c39dcb947f, type: 3}

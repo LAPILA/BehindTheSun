@@ -12,6 +12,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Demo_1.unity
     guid: 3fce4b14a1605644c814098cb0806f88
   - enabled: 1
+<<<<<<< Updated upstream
     path: Assets/Scenes/Shelter.unity
     guid: 51af2cd9bd2ec8c40b4ee7b446312616
+=======
+    path: Assets/UI/Main Title UI/MainTitle.unity
+    guid: ce41c029ef236604e805280fd02ac563
+>>>>>>> Stashed changes
   m_configObjects: {}
