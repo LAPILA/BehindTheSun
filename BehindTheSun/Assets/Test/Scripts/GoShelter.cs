@@ -9,12 +9,12 @@ public class GoShelter : MonoBehaviour
     {
         Player = FindObjectOfType<CharacterController2D>();
     }
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "dummy" ) {
-                SceneManager.LoadScene("Shelter");
-            
+        if (collision.gameObject.name == "dummy" && Input.GetKeyDown(KeyCode.C)) {
+            SceneManager.LoadScene("Shelter");
+
         }
     }
+
 }

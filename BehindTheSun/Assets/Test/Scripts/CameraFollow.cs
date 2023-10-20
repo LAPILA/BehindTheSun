@@ -30,7 +30,9 @@ public class CameraFollow : MonoBehaviour
         Vector3 desiredPosition = new Vector3(
             Mathf.Clamp(target.position.x + offset.x, limitMinX + cameraHalfWidth, limitMaxX - cameraHalfWidth),   // X
             Mathf.Clamp(target.position.y + offset.y, limitMinY + cameraHalfHeight, limitMaxY - cameraHalfHeight), // Y
-            transform.position.z); // 카메라의 현재 Z 위치 사용
+            transform.position.z); // 현재 Z 위치를 사용
+
+        // 카메라의 위치를 부드럽게 이동
         transform.position = Vector3.Lerp(transform.position, desiredPosition, Time.deltaTime * smoothSpeed);
     }
 }

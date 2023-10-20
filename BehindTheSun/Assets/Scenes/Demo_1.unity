@@ -794,6 +794,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b05950038f448d944bc3e844b97a0f58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tilemap: {fileID: 1674847129}
+  targetSceneName: Shelter
+  interactKey: 99
 --- !u!1001 &1697357567
 PrefabInstance:
   m_ObjectHideFlags: 0

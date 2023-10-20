@@ -4,20 +4,18 @@ using UnityEngine;
 
 public class StartPoint : MonoBehaviour
 {
-    public string startPoint; //맵이동, 플레이어 시작위치
-    private CharacterController2D Player;
-    private CameraFollow Camera;
+    public string startPoint; // 맵 이동, 플레이어 시작 위치
+    private CharacterController2D playerController;
+    private CameraFollow cameraFollow;
 
-    // Start is called before the first frame update
     void Start()
     {
-        Player = FindObjectOfType<CharacterController2D>();
-        Camera = FindObjectOfType<CameraFollow>();
+        playerController = FindObjectOfType<CharacterController2D>();
+        cameraFollow = FindObjectOfType<CameraFollow>();
 
-        if (startPoint == Player.currentMapName) {
-            Camera.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, -12);
-            Player.transform.position = this.transform.position;
+        if (startPoint == playerController.currentMapName) {
+            cameraFollow.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, -12);
+            playerController.transform.position = this.transform.position;
         }
     }
-
 }
