@@ -13,6 +13,7 @@ public class CharacterController2D : MonoBehaviour
     public bool isControl;
     private Animator animator;
     public string currentMapName;
+    SpriteRenderer spriteRenderer;
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
@@ -20,6 +21,7 @@ public class CharacterController2D : MonoBehaviour
 
     private void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
         if (instance == null) {
             DontDestroyOnLoad(this.gameObject);
             instance = this;
@@ -103,5 +105,23 @@ public class CharacterController2D : MonoBehaviour
             localScale.x *= -1f;
             transform.localScale = localScale;
         }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+            OnDamaged(collision.transform.position);
+    }
+    private void OnDamaged(Vector2 targetPos) // 피격
+    {
+        // 플레이어 무적 레이어 이동
+        gameObject.layer = 11;
+
+        // 피격시 판투명 하게
+        spriteRenderer.color = new Color(1, 1, 1, 0.4f);
+
+        // 튕겨나가기
+        int dirc = transform.position.x - targetPos.x > 0 ? 1 : -1;
+        rb.AddForce(new Vector2(dirc,100), ForceMode2D.Impulse);
     }
 }
