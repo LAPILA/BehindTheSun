@@ -22,6 +22,7 @@ public class CharacterController2D : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
         if (instance == null) {
             DontDestroyOnLoad(this.gameObject);
             instance = this;
@@ -122,6 +123,6 @@ public class CharacterController2D : MonoBehaviour
 
         // Æ¨°Ü³ª°¡±â
         int dirc = transform.position.x - targetPos.x > 0 ? 1 : -1;
-        rb.AddForce(new Vector2(dirc,100), ForceMode2D.Impulse);
+        rb.AddForce(new Vector2(dirc,10), ForceMode2D.Impulse);
     }
 }
