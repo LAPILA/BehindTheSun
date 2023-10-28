@@ -1,9 +1,13 @@
 fileFormatVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
 guid: 6a4898aef99bb5446aab5017fb8e0c60
 =======
 guid: 0b9e1646850d3c54abab62824daf6128
 >>>>>>> 93264b20b64e0f97866828d93bc098629d79ed9d
+=======
+guid: 5b4f2667184dfa0459414d7f4d434794
+>>>>>>> parent of 0c58f19 (ESC_Ui_example)
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}

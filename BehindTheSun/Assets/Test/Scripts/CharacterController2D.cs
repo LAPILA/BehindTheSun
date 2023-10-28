@@ -13,8 +13,11 @@ public class CharacterController2D : MonoBehaviour
     public bool isControl;
     private Animator animator;
     public string currentMapName;
+<<<<<<< HEAD
     SpriteRenderer spriteRenderer;
     public GameObject menuSet;
+=======
+>>>>>>> parent of 0c58f19 (ESC_Ui_example)
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
@@ -59,15 +62,7 @@ public class CharacterController2D : MonoBehaviour
             }
 
             // 설정 처리 (Esc 키)
-            if (Input.GetButtonDown("Cancel")) { //GetKeyDown(KeyCode.Escape)
-                if (menuSet.activeSelf)
-                {
-                    menuSet.SetActive(false);
-                }
-                else
-                {
-                    menuSet.SetActive(true);
-                }
+            if (Input.GetKeyDown(KeyCode.Escape)) {
                 Debug.Log("ESC설정");
                 // 설정 창을 열거나 게임 일시 정지
                 // 설정 처리 코드를 추가

@@ -1,9 +1,13 @@
 fileFormatVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
 guid: f752d8e99c4679d4bbf5a12069217d12
 =======
 guid: 0c9dcdcc58f31364ab6fd9e0ac08db73
 >>>>>>> 93264b20b64e0f97866828d93bc098629d79ed9d
+=======
+guid: 69014c3f4a6387c4b9885bbd242dd96c
+>>>>>>> parent of 0c58f19 (ESC_Ui_example)
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

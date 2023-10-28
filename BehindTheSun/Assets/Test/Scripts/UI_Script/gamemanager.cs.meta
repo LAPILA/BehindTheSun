@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:BehindTheSun/Assets/Test/Scripts/UI_Script/gamemanager.cs.meta
 guid: 9debd668f8d9a494da484db38cd70a6c
+=======
+guid: 07152a6d55ec62a41a401c7ffb6b5070
+>>>>>>> parent of 0c58f19 (ESC_Ui_example):BehindTheSun/Assets/Test/Scripts/UI_script/Main Title UI/GameStart.cs.meta
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
