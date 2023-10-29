@@ -14,8 +14,8 @@ public class StartPoint : MonoBehaviour
         cameraFollow = FindObjectOfType<CameraFollow>();
 
         if (startPoint == playerController.currentMapName) {
-            cameraFollow.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, -12);
-            playerController.transform.position = this.transform.position;
+            cameraFollow.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+            playerController.transform.position = new Vector3(playerController.destinationX, playerController.destinationY, transform.position.z + 1);
         }
     }
 }
