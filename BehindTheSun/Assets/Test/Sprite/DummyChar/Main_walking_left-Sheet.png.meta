@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 490be3453fb25c34a9969039e393a429
+guid: faeebc2c38319b445b1318f6c05a2cc3
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 10
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -136,13 +136,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: dummy_0
+      name: Main_walking_left-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 14
-        height: 16
+        width: 135
+        height: 276
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,71 +150,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b4f2237ee2945134ea0f77749032b8ff
-      internalID: -1967519378
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dummy_1
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 0
-        width: 14
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5fba479e618fd884e80eaacefd7dc83d
-      internalID: 1216028526
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dummy_2
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 14
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ed86b01559723ba468d28176162f799b
-      internalID: 315959068
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dummy_3
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 0
-        width: 14
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ca985ea722b8f1540b1d344290b1229b
-      internalID: -1813440201
+      spriteID: 095ae6dd3a50c7b42867bfa604356f24
+      internalID: -1770580591
       vertices: []
       indices: 
       edges: []
@@ -230,10 +167,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      dummy_0: -1967519378
-      dummy_1: 1216028526
-      dummy_2: 315959068
-      dummy_3: -1813440201
+      Main_walking_left-Sheet_0: -1770580591
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
