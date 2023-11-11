@@ -94,12 +94,6 @@ public class CharacterController2D : MonoBehaviour
             Debug.Log("ESC설정");
             // 설정 로직 추가 예정
         }
-
-        // 상호작용 (C 키)
-        if (Input.GetKeyDown(KeyCode.C)) {
-            Debug.Log("C상호작용");
-            // 상호작용 로직 추가 예정
-        }
     }
 
     private void MoveCharacter()
