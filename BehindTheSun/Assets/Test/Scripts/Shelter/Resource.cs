@@ -12,7 +12,6 @@ public class Resource : MonoBehaviour
     //List이름에 따른 수 정리
     private Dictionary<string, int> resources = new Dictionary<string, int>();
 
-    
     void Awake()
     {   //아이템관련 정보 제거 안되게!
         if (Instance == null) {
@@ -29,7 +28,7 @@ public class Resource : MonoBehaviour
         }
     }
 
-    public void AddResource(string name, int quantity)//아이템 추가 방법 AddResource(name,수)
+    public void AddResource(string name, int quantity)
     {
         if (resources.ContainsKey(name)) {
             resources[name] += quantity;
@@ -39,6 +38,7 @@ public class Resource : MonoBehaviour
             Debug.Log($"{name} 존재 안함");
         }
     }
+
 
     public bool RemoveResource(string name, int quantity) //아이템 제거 방법 RemoveResource(name,수)
     {
