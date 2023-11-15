@@ -8,7 +8,6 @@ public class gamemanager : MonoBehaviour
 {
     public static gamemanager instance;
     public GameObject Matter_Inventory;
-    public Resource Item_resource;
 
     bool MI_Active;
 
@@ -20,7 +19,6 @@ public class gamemanager : MonoBehaviour
     public Text Stone_Num;
     public Text Iron_Num;
     public Text Gold_Num;
-    public Text Coral_Num;
     public Text CornerStone_Num;
 
 
@@ -35,7 +33,6 @@ public class gamemanager : MonoBehaviour
     public int Stone_quantity = 100;
     public int Iron_quantity = 100;
     public int Gold_quantity = 100;
-    public int Coral_quantity = 100;
     public int CornerStone_quantity = 100;
 
     void Start()
@@ -73,20 +70,10 @@ public class gamemanager : MonoBehaviour
         Stone_Num.text = Stone_quantity.ToString();
         Iron_Num.text = Iron_quantity.ToString();
         Gold_Num.text = Gold_quantity.ToString();
-        Coral_Num.text = Coral_quantity.ToString();
         CornerStone_Num.text= CornerStone_quantity.ToString();
+    }
 
-
-        Wood_quantity = Item_resource.GetResourceQuantity("³ª¹«");
-        Iron_quantity = Item_resource.GetResourceQuantity("Ã¶");
-        Gold_quantity = Item_resource.GetResourceQuantity("±Ý");
-        CornerStone_quantity = Item_resource.GetResourceQuantity("ÃÊ¼®");
-        Coral_quantity = Item_resource.GetResourceQuantity("¼®Åº");
-        Stone_quantity = Item_resource.GetResourceQuantity("µ¹");
-
-}
-
-public void Use_PainKiller()
+    public void Use_PainKiller()
     {
         Cr_HP_Value += 15;
         if (Cr_HP_Value > MAX_HP_Value)

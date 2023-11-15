@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8849580542728958862}
   - component: {fileID: 8958632603678723407}
-  - component: {fileID: 1155554656678162548}
   m_Layer: 0
   m_Name: UI_Manager
   m_TagString: Untagged
@@ -45,69 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ff6089f73c9e8c4f991892ad4019647, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Matter_Inventory: {fileID: 0}
-  Item_resource: {fileID: 0}
   HP_Gauge: {fileID: 0}
   ES_Gauge: {fileID: 0}
   BP_Gauge: {fileID: 0}
-  Wood_Num: {fileID: 0}
-  Stone_Num: {fileID: 0}
-  Iron_Num: {fileID: 0}
-  Gold_Num: {fileID: 0}
-  Coral_Num: {fileID: 0}
-  CornerStone_Num: {fileID: 0}
-  MAX_HP_Value: 100
   Cr_HP_Value: 10
-  MAX_ES_Value: 200
   Cr_ES_Value: 10
-  MAX_BP_Value: 100
   Cr_BP_Value: 10
-  Wood_quantity: 100
-  Stone_quantity: 100
-  Iron_quantity: 100
-  Gold_quantity: 100
-  Coral_quantity: 100
-  CornerStone_quantity: 100
---- !u!114 &1155554656678162548
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1861736554188457568}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d50ab569a8f2808498d9a1308540c3c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameManager: {fileID: 0}
-  highlight_1: {fileID: 0}
-  highlight_2: {fileID: 0}
-  highlight_3: {fileID: 0}
-  highlight_4: {fileID: 0}
-  highlight_5: {fileID: 0}
-  highlight_6: {fileID: 0}
-  highlight_7: {fileID: 0}
-  highlight_8: {fileID: 0}
-  highlight_9: {fileID: 0}
-  highlight_10: {fileID: 0}
-  PickAxe_Value_num: {fileID: 0}
-  Pistol_bullet_num: {fileID: 0}
-  Rifle_bullet_num: {fileID: 0}
-  Shotgun_bullet_num: {fileID: 0}
-  Painkiller_num: {fileID: 0}
-  Antibiotic_num: {fileID: 0}
-  Potato_num: {fileID: 0}
-  Meet_num: {fileID: 0}
-  Canned_Food_num: {fileID: 0}
-  Antidepressants_num: {fileID: 0}
-  Cr_PickAxe_Value: 100
-  Pistol_bullet: 100
-  Rifle_bullet: 100
-  Shotgun_bullet: 100
-  Painkiller_quantity: 100
-  Antibiotic_quantity: 100
-  Potato_quantity: 100
-  Meet_quantity: 100
-  Canned_Food_quantity: 100
-  Antidepressants_quantity: 100
