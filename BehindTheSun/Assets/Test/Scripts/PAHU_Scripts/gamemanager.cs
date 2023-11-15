@@ -8,6 +8,7 @@ public class gamemanager : MonoBehaviour
 {
     public static gamemanager instance;
     public GameObject Matter_Inventory;
+    public Resource Matter_resource;
 
     bool MI_Active;
 
@@ -20,6 +21,7 @@ public class gamemanager : MonoBehaviour
     public Text Iron_Num;
     public Text Gold_Num;
     public Text CornerStone_Num;
+    public Text Coral_Num;
 
 
     public float MAX_HP_Value = 100;
@@ -34,6 +36,7 @@ public class gamemanager : MonoBehaviour
     public int Iron_quantity = 100;
     public int Gold_quantity = 100;
     public int CornerStone_quantity = 100;
+    public int Coral_quantity = 100;
 
     void Start()
     {
@@ -66,11 +69,19 @@ public class gamemanager : MonoBehaviour
         ES_Gauge.value = Cr_ES_Value / MAX_ES_Value;
         BP_Gauge.value = Cr_BP_Value / MAX_BP_Value;
 
+        Wood_quantity = Matter_resource.GetResourceQuantity("나무")-899;
+        Stone_quantity = Matter_resource.GetResourceQuantity("돌")-899;
+        Iron_quantity = Matter_resource.GetResourceQuantity("제련된 철") - 899;
+        Gold_quantity = Matter_resource.GetResourceQuantity("제련된 금") - 899;
+        CornerStone_quantity = Matter_resource.GetResourceQuantity("초석") - 899;
+        Coral_quantity = Matter_resource.GetResourceQuantity("석탄");
+
         Wood_Num.text = Wood_quantity.ToString();
         Stone_Num.text = Stone_quantity.ToString();
         Iron_Num.text = Iron_quantity.ToString();
         Gold_Num.text = Gold_quantity.ToString();
         CornerStone_Num.text= CornerStone_quantity.ToString();
+        Coral_Num.text = Coral_quantity.ToString();
     }
 
     public void Use_PainKiller()
