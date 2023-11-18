@@ -1994,6 +1994,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1292844621}
   - component: {fileID: 1292844620}
+  - component: {fileID: 1292844622}
   m_Layer: 0
   m_Name: pot_none
   m_TagString: Untagged
@@ -2068,6 +2069,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1292844622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1292844619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96e82aa707d977f468163071c3566132, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NonePotImage: {fileID: 21300000, guid: 88a867d441415364eaa7fcb2317ed939, type: 3}
+  PotatoPotImage: {fileID: 21300000, guid: 6553a96d8277ef24085473658a3b6856, type: 3}
 --- !u!1001 &1329727781
 PrefabInstance:
   m_ObjectHideFlags: 0
