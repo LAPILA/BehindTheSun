@@ -1669,6 +1669,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &838730680 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8793945855570925189, guid: c96bba54b0907444b9f39529fcd92b12, type: 3}
+  m_PrefabInstance: {fileID: 1599161989}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &843160800
 GameObject:
   m_ObjectHideFlags: 0
@@ -2936,6 +2947,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1486330305 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2207936760385476321, guid: c96bba54b0907444b9f39529fcd92b12, type: 3}
+  m_PrefabInstance: {fileID: 1599161989}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1532009900
 GameObject:
   m_ObjectHideFlags: 0
@@ -15189,6 +15211,14 @@ PrefabInstance:
       propertyPath: Stone_Num
       value: 
       objectReference: {fileID: 89057520}
+    - target: {fileID: 8958632603678723407, guid: 7ce57c6a636268441bbd43a9286430f5, type: 3}
+      propertyPath: Rough_Gold_Num
+      value: 
+      objectReference: {fileID: 1486330305}
+    - target: {fileID: 8958632603678723407, guid: 7ce57c6a636268441bbd43a9286430f5, type: 3}
+      propertyPath: Rough_Iron_Num
+      value: 
+      objectReference: {fileID: 838730680}
     - target: {fileID: 8958632603678723407, guid: 7ce57c6a636268441bbd43a9286430f5, type: 3}
       propertyPath: CornerStone_Num
       value: 

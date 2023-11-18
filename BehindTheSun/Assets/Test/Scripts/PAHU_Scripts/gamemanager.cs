@@ -22,6 +22,8 @@ public class gamemanager : MonoBehaviour
     public Text Gold_Num;
     public Text CornerStone_Num;
     public Text Coral_Num;
+    public Text Rough_Iron_Num;
+    public Text Rough_Gold_Num;
 
 
     public float MAX_HP_Value = 100;
@@ -37,6 +39,8 @@ public class gamemanager : MonoBehaviour
     public int Gold_quantity = 100;
     public int CornerStone_quantity = 100;
     public int Coral_quantity = 100;
+    public int Rough_Iron_quantity = 100;
+    public int Rough_Gold_quantity = 100;
 
     void Start()
     {
@@ -75,6 +79,8 @@ public class gamemanager : MonoBehaviour
         Gold_quantity = Matter_resource.GetResourceQuantity("¡¶∑√µ» ±›") - 899;
         CornerStone_quantity = Matter_resource.GetResourceQuantity("√ ºÆ") - 899;
         Coral_quantity = Matter_resource.GetResourceQuantity("ºÆ≈∫");
+        Rough_Gold_quantity = Matter_resource.GetResourceQuantity("±›");
+        Rough_Iron_quantity = Matter_resource.GetResourceQuantity("√∂");
 
         Wood_Num.text = Wood_quantity.ToString();
         Stone_Num.text = Stone_quantity.ToString();
@@ -82,6 +88,8 @@ public class gamemanager : MonoBehaviour
         Gold_Num.text = Gold_quantity.ToString();
         CornerStone_Num.text= CornerStone_quantity.ToString();
         Coral_Num.text = Coral_quantity.ToString();
+        Rough_Iron_Num.text = Rough_Iron_quantity.ToString();
+        Rough_Gold_Num.text = Rough_Gold_quantity.ToString();
     }
 
     public void Use_PainKiller()
