@@ -67,7 +67,7 @@ public class Drill : MonoBehaviour
     {
         //임시자원의 리소스마다
         foreach (var resource in temporaryResources) {
-            //Key값과 수를 각각 추가한다.rm
+            //Key값과 수를 각각 추가한다.
             Resource.Instance.AddResource(resource.Key, resource.Value);
             Debug.Log($"{resource.Value}개의 {resource.Key}를 추가했습니다.");
         }
