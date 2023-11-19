@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Pot : MonoBehaviour
 {
+    GameObject GetAlarm = null;
+    SpriteRenderer spriteRenderer;
     bool isInteractable = false;
     bool isGrwoing = false; //감자가 자라는 중인지 획인
     int potato = 0;
@@ -14,7 +16,9 @@ public class Pot : MonoBehaviour
     //int seed = 다른  함수의 seed 수 
     void Start()
     {
-        NonePotImage = GetComponent<Sprite>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        GetAlarm = transform.GetChild(0).gameObject;
+        GetAlarm.SetActive(false);
     }
 
     // Update is called once per frame
@@ -34,6 +38,8 @@ public class Pot : MonoBehaviour
 
     private void Harvest()
     {
+        GetAlarm.SetActive(false);
+        spriteRenderer.sprite = NonePotImage;
         mypotato += potato;
         potato = 0;
         Debug.Log($"Potato: {potato}");
@@ -46,7 +52,8 @@ public class Pot : MonoBehaviour
         //씨앗 필요하면, 씨앗 감소 함수 seed-- 를 아이템 DB에 업뎃;
         Debug.Log("씨앗 확인 완료, 농사 시작");
         yield return new WaitForSeconds(2f);
-        PotatoPotImage = GetComponent<Sprite>();
+        spriteRenderer.sprite = PotatoPotImage;
+        GetAlarm.SetActive(true);
         Debug.Log("수확완료");
         potato += 8;
         isGrwoing = false;

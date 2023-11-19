@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Drill : MonoBehaviour
 {
+    GameObject GetAlarm = null;
     private bool isInteractable = false;//나중에 상호작용 키(아이템 획득 추가필요)
     public bool GenGage = false;//전기
     private Coroutine resourceGenerationCoroutine;//자원생성 코루틴
@@ -12,6 +13,8 @@ public class Drill : MonoBehaviour
     private void Start()
     {
         animator = GetComponent<Animator>();
+        GetAlarm = transform.GetChild(0).gameObject;
+        GetAlarm.SetActive(false);
     }
     private void Update()
     {
@@ -28,6 +31,7 @@ public class Drill : MonoBehaviour
 
         }
         if (isInteractable && Input.GetKeyDown(KeyCode.C)) {
+            GetAlarm.SetActive(false);
             GetResource();
         }
     }
@@ -35,9 +39,11 @@ public class Drill : MonoBehaviour
   //하루 전체인 16분마다(1분당20개씩) 자원 생성
     private IEnumerator GenerateResources()
     {
+        
         for (int i = 0; i < 16; i++) { // 16분 동안 반복
             yield return new WaitForSeconds(60f); // 1분 대기
             GenerateRandomResources(20); // 1분마다 20개 자원 생성
+            GetAlarm.SetActive(true);
         }
         resourceGenerationCoroutine = null;
     }
