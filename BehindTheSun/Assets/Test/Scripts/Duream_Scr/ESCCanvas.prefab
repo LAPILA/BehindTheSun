@@ -377,7 +377,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4057619260826086152}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1343897000546696930, guid: 0119d8df99437254d922a4824943d2ec, type: 3}
+        m_TargetAssemblyTypeName: ESC_UI, Assembly-CSharp
+        m_MethodName: GameExit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4921375258923011565
 GameObject:
   m_ObjectHideFlags: 0

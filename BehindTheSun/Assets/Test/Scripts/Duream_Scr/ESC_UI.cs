@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement; // 씬 관리를 위한 네임스페이스 사용
 
 public class ESC_UI : MonoBehaviour
 {
-    
+    public GameObject player;
     public GameObject menu;
     public static ESC_UI instance; // 싱글톤 패턴을 위한 인스턴스
     private const float GroundCheckRadius = 0.2f; // 지면 확인을 위한 반지름
@@ -87,7 +87,20 @@ public class ESC_UI : MonoBehaviour
     //        rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
     //    }
     //}
+    public void GameSave()
+    {
+        
+    }
 
+    public void GameLoad()
+    {
+
+    }
+
+    public void GameExit()
+    {
+        Application.Quit();
+    }
     private void HandleActions()
     {
         // 공격, 설정, 상호작용 등 다른 액션 처리
@@ -110,8 +123,10 @@ public class ESC_UI : MonoBehaviour
                 menu.SetActive(true);
             }
             Debug.Log("ESC설정");
+            GameExit();
             // 설정 로직 추가 예정
         }
+        
 
         // 상호작용 (C 키)
         if (Input.GetKeyDown(KeyCode.C))
