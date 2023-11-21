@@ -16,9 +16,6 @@ public class Generator : MonoBehaviour
     private void Start()
     {
         Instance = this;
-        drill = FindObjectOfType<Drill>();
-        yongGwang = FindObjectOfType<YongGwang>();
-        tv = FindObjectOfType<TV>();
         animator = GetComponent<Animator>();
         if(animator == null) {
             Debug.Log("오류");
@@ -28,6 +25,7 @@ public class Generator : MonoBehaviour
 
     void Update()
     {
+
         //겹친상태에서 C키 누르면 작동
         if (Input.GetKeyDown(KeyCode.C) && isInteractable) {
             UseGenerator();
@@ -36,6 +34,7 @@ public class Generator : MonoBehaviour
 
     void UseGenerator()
     {
+        EnsureDependenciesInitialized();
         //자원창에서 석탄, 개수만큼 삭제
         if (Resource.Instance.RemoveResource("석탄", (int)coalConsumptionRate)) {
             coalCount += coalConsumptionRate; // 보유 석탄 추가
@@ -64,25 +63,43 @@ public class Generator : MonoBehaviour
             // 석탄이 0이 되면 반복 중지
             if (coalCount <= 0) {
                 Debug.Log("석탄이 없어 발전기가 중지되었습니다.");
-                animator.SetBool("OnSys", false);
-                drill.GenGage = false;
-                yongGwang.GenGage = false;
-                tv.GenGage = false;
-                coalConsumptionCoroutine = null;
+                StopGenerator();
                 break; // 루프 중지
             }
 
-            // 작동 상태 설정
-            drill.GenGage = true;
-            yongGwang.GenGage = true;
-            tv.GenGage = true;
-            
+            EnsureDependenciesInitialized();
+            ActivateMachines();
+
 
             // 12초 대기
             yield return new WaitForSeconds(12f);
         }
     }
 
+    private void EnsureDependenciesInitialized()
+    {
+        if (drill == null)
+            drill = FindObjectOfType<Drill>();
+        if (yongGwang == null)
+            yongGwang = FindObjectOfType<YongGwang>();
+        if (tv == null)
+            tv = FindObjectOfType<TV>();
+    }
+    private void ActivateMachines()
+    {
+        drill.GenGage = true;
+        yongGwang.GenGage = true;
+        tv.GenGage = true;
+    }
+
+    private void StopGenerator()
+    {
+        animator.SetBool("OnSys", false);
+        drill.GenGage = false;
+        yongGwang.GenGage = false;
+        tv.GenGage = false;
+        coalConsumptionCoroutine = null;
+    }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
