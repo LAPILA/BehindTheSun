@@ -19,6 +19,7 @@ public class Build : MonoBehaviour
     public Button DrillButton;
     public Button TVButton;
 
+
     private void Start()
     {
         generator.SetActive(false);
@@ -64,7 +65,6 @@ public class Build : MonoBehaviour
             Resource.Instance.RemoveResource("철", 50);
             Resource.Instance.RemoveResource("금", 100);
             generator.SetActive(true);
-            genButton.interactable = false;
         }
         else {
             Debug.Log("자원부족");
@@ -80,9 +80,7 @@ public class Build : MonoBehaviour
             Resource.Instance.RemoveResource("철", 100);
             Resource.Instance.RemoveResource("금", 50);
             Drill.SetActive(true);
-            DrillButton.interactable = false;
-        }
-        else {
+        }else {
             Debug.Log("자원부족");
         }
     }
@@ -94,9 +92,7 @@ public class Build : MonoBehaviour
             Resource.Instance.RemoveResource("돌", 100);
             Resource.Instance.RemoveResource("철", 50);
             YongGwang.SetActive(true);
-            YongGwangButton.interactable = false;
-        }
-        else {
+        }else {
             Debug.Log("자원부족");
         }
     }
@@ -110,9 +106,7 @@ public class Build : MonoBehaviour
             Resource.Instance.RemoveResource("철", 100);
             Resource.Instance.RemoveResource("금", 100);
             TV.SetActive(true);
-            TVButton.interactable = false;
-        }
-        else {
+        }else {
             Debug.Log("자원부족");
         }
     }

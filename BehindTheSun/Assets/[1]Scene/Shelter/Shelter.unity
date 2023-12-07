@@ -516,10 +516,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: YongGwang
       objectReference: {fileID: 0}
-    - target: {fileID: 7278995064612665220, guid: 855097be855709e42a6ec0b8f1363d5b, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 9166758782391719949, guid: 855097be855709e42a6ec0b8f1363d5b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -27.287779
@@ -1800,17 +1796,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!114 &1501647007 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 80071498127301222, guid: 2b9957cbffe898147b2d65a00239db7f, type: 3}
-  m_PrefabInstance: {fileID: 4154985895417357951}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1532462815
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2169,10 +2154,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3751649769115131880, guid: fc33629d688a60d4ead01f4349ea9bd6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4484922344387457483, guid: fc33629d688a60d4ead01f4349ea9bd6, type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4520841353872188100, guid: fc33629d688a60d4ead01f4349ea9bd6, type: 3}
@@ -6183,10 +6164,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3310217738534307001, guid: 2b9957cbffe898147b2d65a00239db7f, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4624821764084545815, guid: 2b9957cbffe898147b2d65a00239db7f, type: 3}
       propertyPath: TV
       value: 
@@ -6196,10 +6173,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 80247974}
     - target: {fileID: 4624821764084545815, guid: 2b9957cbffe898147b2d65a00239db7f, type: 3}
-      propertyPath: gennull
-      value: 
-      objectReference: {fileID: 1501647007}
-    - target: {fileID: 4624821764084545815, guid: 2b9957cbffe898147b2d65a00239db7f, type: 3}
       propertyPath: YongGwang
       value: 
       objectReference: {fileID: 886476722}
@@ -6207,48 +6180,8 @@ PrefabInstance:
       propertyPath: generator
       value: 
       objectReference: {fileID: 264200219}
-    - target: {fileID: 4653730214696910671, guid: 2b9957cbffe898147b2d65a00239db7f, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4653730214696910671, guid: 2b9957cbffe898147b2d65a00239db7f, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5237073289971581618, guid: 2b9957cbffe898147b2d65a00239db7f, type: 3}
-      propertyPath: m_Name
-      value: Title
-      objectReference: {fileID: 0}
-    - target: {fileID: 5315636787267011247, guid: 2b9957cbffe898147b2d65a00239db7f, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -23.999023
-      objectReference: {fileID: 0}
-    - target: {fileID: 6075644070514387156, guid: 2b9957cbffe898147b2d65a00239db7f, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7503320138771069160, guid: 2b9957cbffe898147b2d65a00239db7f, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8153680661384640172, guid: 2b9957cbffe898147b2d65a00239db7f, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8931678745834621558, guid: 2b9957cbffe898147b2d65a00239db7f, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9144592719451876026, guid: 2b9957cbffe898147b2d65a00239db7f, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 5128364154402525572, guid: 2b9957cbffe898147b2d65a00239db7f, type: 3}
-    - {fileID: 2897779786093554225, guid: 2b9957cbffe898147b2d65a00239db7f, type: 3}
-    - {fileID: 5849706518504969943, guid: 2b9957cbffe898147b2d65a00239db7f, type: 3}
-    - {fileID: 6650184137357646260, guid: 2b9957cbffe898147b2d65a00239db7f, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b9957cbffe898147b2d65a00239db7f, type: 3}
@@ -6256,10 +6189,10 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 1747111608}
   - {fileID: 625284131}
   - {fileID: 4154985895417357951}
   - {fileID: 1931070918}
+  - {fileID: 1747111608}
   - {fileID: 1532462815}
   - {fileID: 702405459}
   - {fileID: 867197893}
