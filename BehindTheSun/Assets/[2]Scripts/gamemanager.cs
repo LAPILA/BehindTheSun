@@ -8,7 +8,7 @@ public class gamemanager : MonoBehaviour
 {
     public static gamemanager instance;
     public GameObject Matter_Inventory;
-    public Resource Item_resource;
+    public Resource Matter_resource;
 
     bool MI_Active;
 
@@ -20,8 +20,10 @@ public class gamemanager : MonoBehaviour
     public Text Stone_Num;
     public Text Iron_Num;
     public Text Gold_Num;
-    public Text Coral_Num;
     public Text CornerStone_Num;
+    public Text Coral_Num;
+    public Text Rough_Iron_Num;
+    public Text Rough_Gold_Num;
 
 
     public float MAX_HP_Value = 100;
@@ -35,8 +37,10 @@ public class gamemanager : MonoBehaviour
     public int Stone_quantity = 100;
     public int Iron_quantity = 100;
     public int Gold_quantity = 100;
-    public int Coral_quantity = 100;
     public int CornerStone_quantity = 100;
+    public int Coral_quantity = 100;
+    public int Rough_Iron_quantity = 100;
+    public int Rough_Gold_quantity = 100;
 
     void Start()
     {
@@ -69,24 +73,26 @@ public class gamemanager : MonoBehaviour
         ES_Gauge.value = Cr_ES_Value / MAX_ES_Value;
         BP_Gauge.value = Cr_BP_Value / MAX_BP_Value;
 
+        Wood_quantity = Matter_resource.GetResourceQuantity("³ª¹«");
+        Stone_quantity = Matter_resource.GetResourceQuantity("µ¹");
+        Iron_quantity = Matter_resource.GetResourceQuantity("Á¦·ÃµÈ Ã¶");
+        Gold_quantity = Matter_resource.GetResourceQuantity("Á¦·ÃµÈ ±Ý");
+        CornerStone_quantity = Matter_resource.GetResourceQuantity("ÃÊ¼®");
+        Coral_quantity = Matter_resource.GetResourceQuantity("¼®Åº");
+        Rough_Gold_quantity = Matter_resource.GetResourceQuantity("±Ý");
+        Rough_Iron_quantity = Matter_resource.GetResourceQuantity("Ã¶");
+
         Wood_Num.text = Wood_quantity.ToString();
         Stone_Num.text = Stone_quantity.ToString();
         Iron_Num.text = Iron_quantity.ToString();
         Gold_Num.text = Gold_quantity.ToString();
-        Coral_Num.text = Coral_quantity.ToString();
         CornerStone_Num.text= CornerStone_quantity.ToString();
+        Coral_Num.text = Coral_quantity.ToString();
+        Rough_Iron_Num.text = Rough_Iron_quantity.ToString();
+        Rough_Gold_Num.text = Rough_Gold_quantity.ToString();
+    }
 
-
-        Wood_quantity = Item_resource.GetResourceQuantity("³ª¹«");
-        Iron_quantity = Item_resource.GetResourceQuantity("Ã¶");
-        Gold_quantity = Item_resource.GetResourceQuantity("±Ý");
-        CornerStone_quantity = Item_resource.GetResourceQuantity("ÃÊ¼®");
-        Coral_quantity = Item_resource.GetResourceQuantity("¼®Åº");
-        Stone_quantity = Item_resource.GetResourceQuantity("µ¹");
-
-}
-
-public void Use_PainKiller()
+    public void Use_PainKiller()
     {
         Cr_HP_Value += 15;
         if (Cr_HP_Value > MAX_HP_Value)
