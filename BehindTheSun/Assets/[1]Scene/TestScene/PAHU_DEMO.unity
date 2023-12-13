@@ -223,49 +223,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1861736554188457568, guid: 7ce57c6a636268441bbd43a9286430f5, type: 3}
   m_PrefabInstance: {fileID: 1434967480128070988}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &74018941
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 74018938}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d50ab569a8f2808498d9a1308540c3c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameManager: {fileID: 74018942}
-  highlight_1: {fileID: 933846048}
-  highlight_2: {fileID: 1272031860}
-  highlight_3: {fileID: 252364377}
-  highlight_4: {fileID: 1896713995}
-  highlight_5: {fileID: 518544675}
-  highlight_6: {fileID: 313218113}
-  highlight_7: {fileID: 783911665}
-  highlight_8: {fileID: 1027544432}
-  highlight_9: {fileID: 1582146787}
-  highlight_10: {fileID: 1153604253}
-  PickAxe_Value_num: {fileID: 2112324548}
-  Pistol_bullet_num: {fileID: 1814289216}
-  Rifle_bullet_num: {fileID: 1045188261}
-  Shotgun_bullet_num: {fileID: 1422217807}
-  Painkiller_num: {fileID: 923217751}
-  Antibiotic_num: {fileID: 1321724999}
-  Potato_num: {fileID: 822386131}
-  Meet_num: {fileID: 1723948948}
-  Canned_Food_num: {fileID: 801682455}
-  Antidepressants_num: {fileID: 2140924286}
-  Cr_PickAxe_Value: 100
-  Pistol_bullet: 100
-  Rifle_bullet: 100
-  Shotgun_bullet: 100
-  Painkiller_quantity: 100
-  Antibiotic_quantity: 100
-  Potato_quantity: 100
-  Meet_quantity: 100
-  Canned_Food_quantity: 100
-  Antidepressants_quantity: 100
 --- !u!114 &74018942 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8958632603678723407, guid: 7ce57c6a636268441bbd43a9286430f5, type: 3}
@@ -275,6 +232,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7ff6089f73c9e8c4f991892ad4019647, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &74018944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 74018938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75eaff32fb0b58644939192d21aeaf2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &89057520 stripped
@@ -981,6 +950,10 @@ PrefabInstance:
     - target: {fileID: 1025145325119744, guid: d975e66254b08984ab50d4c39dcb947f, type: 3}
       propertyPath: m_Name
       value: Main Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 4550523820536806, guid: d975e66254b08984ab50d4c39dcb947f, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4550523820536806, guid: d975e66254b08984ab50d4c39dcb947f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3501,6 +3474,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4103740349974351552, guid: 5e26733fe04dbfa4196d92f9d4ff6a83, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.49
+      objectReference: {fileID: 0}
     - target: {fileID: 5684197453559285379, guid: 5e26733fe04dbfa4196d92f9d4ff6a83, type: 3}
       propertyPath: m_LocalPosition.x
       value: 36.55
@@ -3676,6 +3653,10 @@ PrefabInstance:
     - target: {fileID: 70150408614073335, guid: c96bba54b0907444b9f39529fcd92b12, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 112836287785439696, guid: c96bba54b0907444b9f39529fcd92b12, type: 3}
+      propertyPath: m_Name
+      value: highlight4
       objectReference: {fileID: 0}
     - target: {fileID: 175855037366760190, guid: c96bba54b0907444b9f39529fcd92b12, type: 3}
       propertyPath: m_AnchorMax.y
@@ -4105,6 +4086,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1242262289219756557, guid: c96bba54b0907444b9f39529fcd92b12, type: 3}
+      propertyPath: m_Name
+      value: Potato_num
+      objectReference: {fileID: 0}
     - target: {fileID: 1246335414083964818, guid: c96bba54b0907444b9f39529fcd92b12, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -4352,6 +4337,10 @@ PrefabInstance:
     - target: {fileID: 1919164609629343943, guid: c96bba54b0907444b9f39529fcd92b12, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1943176685674677408, guid: c96bba54b0907444b9f39529fcd92b12, type: 3}
+      propertyPath: m_Name
+      value: Shotgun_bullets_quantity
       objectReference: {fileID: 0}
     - target: {fileID: 2001267249095201144, guid: c96bba54b0907444b9f39529fcd92b12, type: 3}
       propertyPath: m_AnchorMax.y
@@ -4617,6 +4606,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2465129760896033472, guid: c96bba54b0907444b9f39529fcd92b12, type: 3}
+      propertyPath: m_Name
+      value: Antidepressants_num
+      objectReference: {fileID: 0}
     - target: {fileID: 2522116248646636227, guid: c96bba54b0907444b9f39529fcd92b12, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -4760,6 +4753,10 @@ PrefabInstance:
     - target: {fileID: 2685538757007626510, guid: c96bba54b0907444b9f39529fcd92b12, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2795903656777202687, guid: c96bba54b0907444b9f39529fcd92b12, type: 3}
+      propertyPath: m_Name
+      value: Painkiller_num
       objectReference: {fileID: 0}
     - target: {fileID: 2839151507995087790, guid: c96bba54b0907444b9f39529fcd92b12, type: 3}
       propertyPath: m_AnchorMax.x
@@ -4908,6 +4905,10 @@ PrefabInstance:
     - target: {fileID: 3080949936939852414, guid: c96bba54b0907444b9f39529fcd92b12, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3098944219809943086, guid: c96bba54b0907444b9f39529fcd92b12, type: 3}
+      propertyPath: m_Name
+      value: highlight2
       objectReference: {fileID: 0}
     - target: {fileID: 3111530343836009026, guid: c96bba54b0907444b9f39529fcd92b12, type: 3}
       propertyPath: m_Color.b
@@ -5553,6 +5554,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4261292593696667240, guid: c96bba54b0907444b9f39529fcd92b12, type: 3}
+      propertyPath: m_Name
+      value: Meet_num
+      objectReference: {fileID: 0}
     - target: {fileID: 4288215917108679318, guid: c96bba54b0907444b9f39529fcd92b12, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -5648,6 +5653,14 @@ PrefabInstance:
     - target: {fileID: 4420872656747685324, guid: c96bba54b0907444b9f39529fcd92b12, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4527893873162536339, guid: c96bba54b0907444b9f39529fcd92b12, type: 3}
+      propertyPath: m_Name
+      value: highlight10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4543962498750932558, guid: c96bba54b0907444b9f39529fcd92b12, type: 3}
+      propertyPath: m_Name
+      value: highlight8
       objectReference: {fileID: 0}
     - target: {fileID: 4545916898748166302, guid: c96bba54b0907444b9f39529fcd92b12, type: 3}
       propertyPath: m_AnchorMax.y
@@ -6273,6 +6286,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -160
       objectReference: {fileID: 0}
+    - target: {fileID: 5863957809625831711, guid: c96bba54b0907444b9f39529fcd92b12, type: 3}
+      propertyPath: m_Name
+      value: highlight3
+      objectReference: {fileID: 0}
     - target: {fileID: 5885584322571408423, guid: c96bba54b0907444b9f39529fcd92b12, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -6333,6 +6350,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6096502937511109224, guid: c96bba54b0907444b9f39529fcd92b12, type: 3}
+      propertyPath: m_Name
+      value: PickAxe_negudo
+      objectReference: {fileID: 0}
     - target: {fileID: 6144837584322701556, guid: c96bba54b0907444b9f39529fcd92b12, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -6356,6 +6377,10 @@ PrefabInstance:
     - target: {fileID: 6144837584322701556, guid: c96bba54b0907444b9f39529fcd92b12, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -225
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149459711147662447, guid: c96bba54b0907444b9f39529fcd92b12, type: 3}
+      propertyPath: m_Name
+      value: Antibiotic_num
       objectReference: {fileID: 0}
     - target: {fileID: 6271960104273770047, guid: c96bba54b0907444b9f39529fcd92b12, type: 3}
       propertyPath: m_AnchorMax.y
@@ -6725,6 +6750,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7026449298862016246, guid: c96bba54b0907444b9f39529fcd92b12, type: 3}
+      propertyPath: m_Name
+      value: highlight9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7052055283277836487, guid: c96bba54b0907444b9f39529fcd92b12, type: 3}
+      propertyPath: m_Name
+      value: highlight6
+      objectReference: {fileID: 0}
     - target: {fileID: 7114677024134586810, guid: c96bba54b0907444b9f39529fcd92b12, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -6828,6 +6861,10 @@ PrefabInstance:
     - target: {fileID: 7391013868903361800, guid: c96bba54b0907444b9f39529fcd92b12, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -160
+      objectReference: {fileID: 0}
+    - target: {fileID: 7441271460459807369, guid: c96bba54b0907444b9f39529fcd92b12, type: 3}
+      propertyPath: m_Name
+      value: highlight1
       objectReference: {fileID: 0}
     - target: {fileID: 7441271460459807369, guid: c96bba54b0907444b9f39529fcd92b12, type: 3}
       propertyPath: m_IsActive
@@ -7049,6 +7086,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7756827186119301220, guid: c96bba54b0907444b9f39529fcd92b12, type: 3}
+      propertyPath: m_Name
+      value: Pistol_bullets_quantity
+      objectReference: {fileID: 0}
     - target: {fileID: 7996144353324223944, guid: c96bba54b0907444b9f39529fcd92b12, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -7217,6 +7258,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8239653626065111305, guid: c96bba54b0907444b9f39529fcd92b12, type: 3}
+      propertyPath: m_Name
+      value: Canned_Food_num
+      objectReference: {fileID: 0}
     - target: {fileID: 8255528237041067447, guid: c96bba54b0907444b9f39529fcd92b12, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -7313,6 +7358,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8418366320293297855, guid: c96bba54b0907444b9f39529fcd92b12, type: 3}
+      propertyPath: m_Name
+      value: Rifle_bullets_quantity
+      objectReference: {fileID: 0}
     - target: {fileID: 8444321179448755486, guid: c96bba54b0907444b9f39529fcd92b12, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -7360,6 +7409,14 @@ PrefabInstance:
     - target: {fileID: 8517342774685143029, guid: c96bba54b0907444b9f39529fcd92b12, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -95
+      objectReference: {fileID: 0}
+    - target: {fileID: 8536025481381670542, guid: c96bba54b0907444b9f39529fcd92b12, type: 3}
+      propertyPath: m_Name
+      value: highlight5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8567922959247287871, guid: c96bba54b0907444b9f39529fcd92b12, type: 3}
+      propertyPath: m_Name
+      value: highlight7
       objectReference: {fileID: 0}
     - target: {fileID: 8645426141269679148, guid: c96bba54b0907444b9f39529fcd92b12, type: 3}
       propertyPath: m_AnchorMax.x
@@ -7724,6 +7781,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c96bba54b0907444b9f39529fcd92b12, type: 3}
+--- !u!114 &1599161990 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5132037945267746842, guid: c96bba54b0907444b9f39529fcd92b12, type: 3}
+  m_PrefabInstance: {fileID: 1599161989}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1617594696
 GameObject:
   m_ObjectHideFlags: 0
@@ -15047,6 +15115,90 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1155554656678162548, guid: 7ce57c6a636268441bbd43a9286430f5, type: 3}
+      propertyPath: Meet_num
+      value: 
+      objectReference: {fileID: 1723948948}
+    - target: {fileID: 1155554656678162548, guid: 7ce57c6a636268441bbd43a9286430f5, type: 3}
+      propertyPath: Potato_num
+      value: 
+      objectReference: {fileID: 822386131}
+    - target: {fileID: 1155554656678162548, guid: 7ce57c6a636268441bbd43a9286430f5, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 74018942}
+    - target: {fileID: 1155554656678162548, guid: 7ce57c6a636268441bbd43a9286430f5, type: 3}
+      propertyPath: highlight_1
+      value: 
+      objectReference: {fileID: 933846048}
+    - target: {fileID: 1155554656678162548, guid: 7ce57c6a636268441bbd43a9286430f5, type: 3}
+      propertyPath: highlight_2
+      value: 
+      objectReference: {fileID: 1272031860}
+    - target: {fileID: 1155554656678162548, guid: 7ce57c6a636268441bbd43a9286430f5, type: 3}
+      propertyPath: highlight_3
+      value: 
+      objectReference: {fileID: 252364377}
+    - target: {fileID: 1155554656678162548, guid: 7ce57c6a636268441bbd43a9286430f5, type: 3}
+      propertyPath: highlight_4
+      value: 
+      objectReference: {fileID: 1896713995}
+    - target: {fileID: 1155554656678162548, guid: 7ce57c6a636268441bbd43a9286430f5, type: 3}
+      propertyPath: highlight_5
+      value: 
+      objectReference: {fileID: 518544675}
+    - target: {fileID: 1155554656678162548, guid: 7ce57c6a636268441bbd43a9286430f5, type: 3}
+      propertyPath: highlight_6
+      value: 
+      objectReference: {fileID: 313218113}
+    - target: {fileID: 1155554656678162548, guid: 7ce57c6a636268441bbd43a9286430f5, type: 3}
+      propertyPath: highlight_7
+      value: 
+      objectReference: {fileID: 783911665}
+    - target: {fileID: 1155554656678162548, guid: 7ce57c6a636268441bbd43a9286430f5, type: 3}
+      propertyPath: highlight_8
+      value: 
+      objectReference: {fileID: 1027544432}
+    - target: {fileID: 1155554656678162548, guid: 7ce57c6a636268441bbd43a9286430f5, type: 3}
+      propertyPath: highlight_9
+      value: 
+      objectReference: {fileID: 1582146787}
+    - target: {fileID: 1155554656678162548, guid: 7ce57c6a636268441bbd43a9286430f5, type: 3}
+      propertyPath: highlight_10
+      value: 
+      objectReference: {fileID: 1153604253}
+    - target: {fileID: 1155554656678162548, guid: 7ce57c6a636268441bbd43a9286430f5, type: 3}
+      propertyPath: Antibiotic_num
+      value: 
+      objectReference: {fileID: 1321724999}
+    - target: {fileID: 1155554656678162548, guid: 7ce57c6a636268441bbd43a9286430f5, type: 3}
+      propertyPath: Painkiller_num
+      value: 
+      objectReference: {fileID: 923217751}
+    - target: {fileID: 1155554656678162548, guid: 7ce57c6a636268441bbd43a9286430f5, type: 3}
+      propertyPath: Canned_Food_num
+      value: 
+      objectReference: {fileID: 801682455}
+    - target: {fileID: 1155554656678162548, guid: 7ce57c6a636268441bbd43a9286430f5, type: 3}
+      propertyPath: Rifle_bullet_num
+      value: 
+      objectReference: {fileID: 1045188261}
+    - target: {fileID: 1155554656678162548, guid: 7ce57c6a636268441bbd43a9286430f5, type: 3}
+      propertyPath: PickAxe_Value_num
+      value: 
+      objectReference: {fileID: 2112324548}
+    - target: {fileID: 1155554656678162548, guid: 7ce57c6a636268441bbd43a9286430f5, type: 3}
+      propertyPath: Pistol_bullet_num
+      value: 
+      objectReference: {fileID: 1814289216}
+    - target: {fileID: 1155554656678162548, guid: 7ce57c6a636268441bbd43a9286430f5, type: 3}
+      propertyPath: Shotgun_bullet_num
+      value: 
+      objectReference: {fileID: 1422217807}
+    - target: {fileID: 1155554656678162548, guid: 7ce57c6a636268441bbd43a9286430f5, type: 3}
+      propertyPath: Antidepressants_num
+      value: 
+      objectReference: {fileID: 2140924286}
     - target: {fileID: 1861736554188457568, guid: 7ce57c6a636268441bbd43a9286430f5, type: 3}
       propertyPath: m_Name
       value: UI_Manager
@@ -15116,9 +15268,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 478823513}
     - target: {fileID: 8958632603678723407, guid: 7ce57c6a636268441bbd43a9286430f5, type: 3}
+      propertyPath: Coral_Num
+      value: 
+      objectReference: {fileID: 1599161990}
+    - target: {fileID: 8958632603678723407, guid: 7ce57c6a636268441bbd43a9286430f5, type: 3}
       propertyPath: Stone_Num
       value: 
       objectReference: {fileID: 89057520}
+    - target: {fileID: 8958632603678723407, guid: 7ce57c6a636268441bbd43a9286430f5, type: 3}
+      propertyPath: Item_resource
+      value: 
+      objectReference: {fileID: 74018944}
     - target: {fileID: 8958632603678723407, guid: 7ce57c6a636268441bbd43a9286430f5, type: 3}
       propertyPath: CornerStone_Num
       value: 
@@ -15133,7 +15293,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1861736554188457568, guid: 7ce57c6a636268441bbd43a9286430f5, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 74018941}
+      addedObject: {fileID: 74018944}
   m_SourcePrefab: {fileID: 100100000, guid: 7ce57c6a636268441bbd43a9286430f5, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

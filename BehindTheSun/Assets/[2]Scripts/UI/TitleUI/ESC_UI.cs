@@ -99,7 +99,7 @@ public class ESC_UI : MonoBehaviour
         }
 
         // ¼³Á¤ (Esc Å°)
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetButtonDown("Cancel"))
         {
             if (menu.activeSelf)
             {

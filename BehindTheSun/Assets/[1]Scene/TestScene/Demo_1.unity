@@ -1074,7 +1074,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4645197308604361280, guid: 235c4f8c9d47f3c4191c1d1c8a6b3070, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 44.8
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 4645197308604361280, guid: 235c4f8c9d47f3c4191c1d1c8a6b3070, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1111,6 +1111,14 @@ PrefabInstance:
     - target: {fileID: 4645197308604361280, guid: 235c4f8c9d47f3c4191c1d1c8a6b3070, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5648905692528408041, guid: 235c4f8c9d47f3c4191c1d1c8a6b3070, type: 3}
+      propertyPath: destinationX
+      value: -13
+      objectReference: {fileID: 0}
+    - target: {fileID: 5648905692528408041, guid: 235c4f8c9d47f3c4191c1d1c8a6b3070, type: 3}
+      propertyPath: destinationY
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5648905692528408041, guid: 235c4f8c9d47f3c4191c1d1c8a6b3070, type: 3}
       propertyPath: transferMapName
