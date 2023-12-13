@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class ToolBar : MonoBehaviour
 {
+    public static ToolBar Instance { get; private set; }
     public gamemanager gameManager;
 
     public GameObject highlight_1;
