@@ -1,21 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class DontDestroy_UI : MonoBehaviour
 {
     public static DontDestroy_UI instance;
-    void Start()
+
+    void Awake()
     {
-        if (instance == null)
-        {
-            DontDestroyOnLoad(this.gameObject);
+        if (instance == null) {
+            DontDestroyOnLoad(gameObject);
             instance = this;
         }
-        else
-        {
-            Destroy(this.gameObject);
+        else {
+            Destroy(gameObject);
         }
     }
-
 }
