@@ -13,7 +13,9 @@ public class CharacterController2D : MonoBehaviour
 
     private bool isFacingRight = true; // 캐릭터가 오른쪽을 보고 있는지 여부
     private bool isRun = false; // 캐릭터가 달리고 있는지 여부
+    private bool isJumping = false;
     public bool isControl; // 컨트롤 가능한 상태인지 여부
+
 
     private Animator animator; // 애니메이터 컴포넌트 참조
     public string currentMapName;
@@ -44,11 +46,11 @@ public class CharacterController2D : MonoBehaviour
 
     void Update()
     {
+        
         if (isControl) {
             // 이동, 점프, 액션 처리
             HandleMovement();
             HandleJumping();
-            HandleActions();
 
             // 캐릭터 방향 전환
             Flip();
@@ -75,26 +77,18 @@ public class CharacterController2D : MonoBehaviour
     {
         // 점프 처리
         if (Input.GetButtonDown("Jump") && IsGrounded()) {
-            Debug.Log("점프");
+            isJumping = true;
+            animator.SetBool("isJump", isJumping);
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
         }
-    }
 
-    private void HandleActions()
-    {
-        // 공격, 설정, 상호작용 등 다른 액션 처리
-        // 공격 (Z 키)
-        if (Input.GetKeyDown(KeyCode.Z)) {
-            Debug.Log("Z공격");
-            // 공격 로직 추가 예정
-        }
-
-        // 설정 (Esc 키)
-        if (Input.GetKeyDown(KeyCode.Escape)) {
-            Debug.Log("ESC설정");
-            // 설정 로직 추가 예정
+        // 착지 처리
+        if (IsGrounded()) {
+            isJumping = false;
+            animator.SetBool("isJump", isJumping);
         }
     }
+
 
     private void MoveCharacter()
     {

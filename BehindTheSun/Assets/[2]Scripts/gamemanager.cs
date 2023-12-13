@@ -25,7 +25,6 @@ public class gamemanager : MonoBehaviour
     public Text Rough_Iron_Num;
     public Text Rough_Gold_Num;
 
-
     public float MAX_HP_Value = 100;
     public float Cr_HP_Value = 10;
     public float MAX_ES_Value = 200;
@@ -42,6 +41,7 @@ public class gamemanager : MonoBehaviour
     public int Rough_Iron_quantity = 100;
     public int Rough_Gold_quantity = 100;
 
+    private int enemyKillCount = 0;
     void Start()
     {
         MI_Active = false;
@@ -73,11 +73,11 @@ public class gamemanager : MonoBehaviour
         ES_Gauge.value = Cr_ES_Value / MAX_ES_Value;
         BP_Gauge.value = Cr_BP_Value / MAX_BP_Value;
 
-        Wood_quantity = Matter_resource.GetResourceQuantity("나무")-899;
-        Stone_quantity = Matter_resource.GetResourceQuantity("돌")-899;
-        Iron_quantity = Matter_resource.GetResourceQuantity("제련된 철") - 899;
-        Gold_quantity = Matter_resource.GetResourceQuantity("제련된 금") - 899;
-        CornerStone_quantity = Matter_resource.GetResourceQuantity("초석") - 899;
+        Wood_quantity = Matter_resource.GetResourceQuantity("나무");
+        Stone_quantity = Matter_resource.GetResourceQuantity("돌");
+        Iron_quantity = Matter_resource.GetResourceQuantity("제련된 철");
+        Gold_quantity = Matter_resource.GetResourceQuantity("제련된 금");
+        CornerStone_quantity = Matter_resource.GetResourceQuantity("초석");
         Coral_quantity = Matter_resource.GetResourceQuantity("석탄");
         Rough_Gold_quantity = Matter_resource.GetResourceQuantity("금");
         Rough_Iron_quantity = Matter_resource.GetResourceQuantity("철");

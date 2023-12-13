@@ -1,17 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class DayTimer : MonoBehaviour
 {
+    public static DayTimer instance;
     [SerializeField] float setTime = 0.0f;
     int day;
     bool IsNight;
     public float dayTime;
     public float nightTime;
-
-    
+    public bool nextCheck;
     
     void Start()
     {
@@ -21,6 +22,7 @@ public class DayTimer : MonoBehaviour
         day = 0;
         dayTime = 0;
         nightTime = 0;
+        nextCheck = false;
     }
 
     
@@ -54,10 +56,12 @@ public class DayTimer : MonoBehaviour
             transform.rotation = Quaternion.Euler(0, 0, 180);
             setTime = 0.0f;
             IsNight = false;
+            nextCheck = true;
             day++;
+            nextCheck = false;
             Debug.Log("≥∑¿‘¥œ¥Ÿ!");
         }
 
-
     }
+
 }
