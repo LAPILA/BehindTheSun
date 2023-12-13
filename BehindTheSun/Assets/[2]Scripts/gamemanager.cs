@@ -42,6 +42,7 @@ public class gamemanager : MonoBehaviour
     public int Rough_Iron_quantity = 100;
     public int Rough_Gold_quantity = 100;
 
+    private int enemyKillCount = 0;
     void Start()
     {
         MI_Active = false;

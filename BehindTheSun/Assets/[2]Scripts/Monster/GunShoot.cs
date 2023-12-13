@@ -4,19 +4,19 @@ using UnityEngine;
 [System.Serializable]
 public class Weapon
 {
-    public AudioClip shootSound;
     public Sprite itemImage;
     public float bulletSpeed;
     public float reloadTime;
     public int maxBullet;
     public float fireTerm;
+    public float damage;
 }
 
 public class GunShoot : MonoBehaviour
 {
+    private AudioSource audioSource;
     public string weaponType;
     public Transform gunShootPos;
-    private AudioSource audioSource;
     private Weapon currentWeapon;
     private int bulletCount;
     public Sprite pistolImage;
@@ -35,6 +35,8 @@ public class GunShoot : MonoBehaviour
 
     public void Shoot()
     {
+        if (!isShooting) {
+        }
         if (bulletCount > 0 && !isShooting && Time.time >= lastShotTime + currentWeapon.fireTerm) {
             isShooting = true;
             StartCoroutine(ShootCoroutine());
@@ -46,19 +48,15 @@ public class GunShoot : MonoBehaviour
 
     IEnumerator ShootCoroutine()
     {
+
         while (isShooting) {
-            // 플레이어의 위치를 가져옴
             GameObject player = GameObject.FindGameObjectWithTag("Player");
 
             if (player != null) {
-                // 플레이어 위치에서 몬스터 위치를 뺀 방향 벡터 계산
                 Vector3 direction = (player.transform.position - gunShootPos.position).normalized;
-
-                // 총알 생성 및 발사
+                audioSource.Play();
                 GameObject bullet = Instantiate(bulletPrefab, gunShootPos.position, Quaternion.identity);
                 Rigidbody2D bulletRB = bullet.GetComponent<Rigidbody2D>();
-
-                // 총알에 방향 벡터를 이용하여 힘을 가함
                 bulletRB.velocity = direction * currentWeapon.bulletSpeed;
 
                 bulletCount--;
@@ -69,6 +67,7 @@ public class GunShoot : MonoBehaviour
             }
         }
     }
+
 
 
     public void Reload()
@@ -108,12 +107,12 @@ public class GunShoot : MonoBehaviour
             case "Pistol":
                 currentWeapon = new Weapon
                 {
-                    shootSound = null,
                     itemImage = pistolImage,
                     bulletSpeed = 20f,
                     reloadTime = 2f,
                     maxBullet = 10,
-                    fireTerm = 0.5f
+                    fireTerm = 0.8f,
+                    damage = 20
                 };
                 gunShootPos.GetComponent<SpriteRenderer>().sprite = pistolImage;
                 bulletCount = currentWeapon.maxBullet;
@@ -121,12 +120,12 @@ public class GunShoot : MonoBehaviour
             case "Shotgun":
                 currentWeapon = new Weapon
                 {
-                    shootSound = null,
                     itemImage = shotgunImage,
                     bulletSpeed = 10f,
                     reloadTime = 3f,
                     maxBullet = 6,
-                    fireTerm = 4f
+                    fireTerm = 0.5f,
+                    damage = 5
                 };
                 gunShootPos.GetComponent<SpriteRenderer>().sprite = shotgunImage;
                 bulletCount = currentWeapon.maxBullet;
@@ -134,12 +133,12 @@ public class GunShoot : MonoBehaviour
             case "MachineGun":
                 currentWeapon = new Weapon
                 {
-                    shootSound = null,
                     itemImage = machineGunImage,
                     bulletSpeed = 30f,
                     reloadTime = 5f,
                     maxBullet = 30,
-                    fireTerm = 0.2f
+                    fireTerm = 1.5f,
+                    damage = 10
                 };
                 gunShootPos.GetComponent<SpriteRenderer>().sprite = machineGunImage;
                 bulletCount = currentWeapon.maxBullet;
@@ -150,8 +149,4 @@ public class GunShoot : MonoBehaviour
         }
     }
 
-    void PlaySound(AudioClip sound)
-    {
-        audioSource.PlayOneShot(sound);
-    }
 }

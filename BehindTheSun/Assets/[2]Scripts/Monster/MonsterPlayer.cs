@@ -1,20 +1,30 @@
+using System.Collections;
 using UnityEngine;
-
 public class MonsterPlayer : MonoBehaviour
 {
     public float moveSpeed = 2f; // 몬스터 움직임 속도
     public float patrolRange = 5f; // 정찰 범위
     public Transform groundDetection; // 땅 감지용 포인트
+    public Transform groundDetection2; // 땅 감지용 포인트2
     public LayerMask groundLayer; // 땅 레이어
     public LayerMask playerLayer; // 플레이어 레이어
 
     private bool movingRight = true; // 처음엔 우측으로 움직임
     public GunShoot gunShooter;
+
+    private void Start()
+    {
+    }
     void Update()
     {
         RaycastHit2D groundInfo = Physics2D.Raycast(groundDetection.position, Vector2.down, 0.1f, groundLayer);
+        RaycastHit2D groundInfo2 = Physics2D.Raycast(groundDetection2.position, Vector2.right, 0.1f, groundLayer);
 
         if (!groundInfo.collider) {
+            Flip();
+        }
+
+        if(groundInfo2.collider) {
             Flip();
         }
 
