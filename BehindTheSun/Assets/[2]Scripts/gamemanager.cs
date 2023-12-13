@@ -25,7 +25,6 @@ public class gamemanager : MonoBehaviour
     public Text Rough_Iron_Num;
     public Text Rough_Gold_Num;
 
-
     public float MAX_HP_Value = 100;
     public float Cr_HP_Value = 10;
     public float MAX_ES_Value = 200;
