@@ -3436,6 +3436,7 @@ GameObject:
   - component: {fileID: 1605738802}
   - component: {fileID: 1605738801}
   - component: {fileID: 1605738800}
+  - component: {fileID: 1605738803}
   m_Layer: 0
   m_Name: npc
   m_TagString: Untagged
@@ -3510,9 +3511,10 @@ MonoBehaviour:
   sentences:
   - "\uD29C\uD1A0\uB9AC\uC5BC \uC9C4\uD589 \uC911\uC785\uB2C8\uB2E4. \uBC29\uD5A5\uD0A4\uB97C
     \uD1B5\uD574 \uC6C0\uC9C1\uC774\uC2DC\uBA74 \uB3FC\uC694."
-  - hi
+  - "\uAC00\uB098\uB2E4"
   chatTr: {fileID: 213446169}
   chatBoxPrefab: {fileID: 4773864279908912799, guid: 044ddeefc6042ae4f8310663bc25c1b1, type: 3}
+  playerIsClose: 0
 --- !u!4 &1605738802
 Transform:
   m_ObjectHideFlags: 0
@@ -3528,6 +3530,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1605738803
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1605738799}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -2.76, y: 2.005}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 2.5597014, y: -0.20848057}
+    oldSize: {x: 1.34, y: 2.83}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.85, y: 3.45}
+  m_EdgeRadius: 0
 --- !u!1 &1617594696
 GameObject:
   m_ObjectHideFlags: 0
@@ -10537,7 +10584,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5684197453559285379, guid: 5e26733fe04dbfa4196d92f9d4ff6a83, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.73
+      value: -2.79
       objectReference: {fileID: 0}
     - target: {fileID: 5684197453559285379, guid: 5e26733fe04dbfa4196d92f9d4ff6a83, type: 3}
       propertyPath: m_LocalPosition.z
