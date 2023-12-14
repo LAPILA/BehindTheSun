@@ -121,6 +121,11 @@ public class ESC_UI : MonoBehaviour
         }
     }
 
+    public void GameExit()
+    {
+        Application.Quit();
+    }
+
     //private void MoveCharacter()
     //{
     //    // Rigidbody를 이용한 캐릭터 이동
