@@ -29,6 +29,7 @@ public class MonsterMovement : MonoBehaviour
 
     void Start()
     {
+
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
         transform.Find("WatchingIcon").gameObject.SetActive(false);
@@ -40,6 +41,7 @@ public class MonsterMovement : MonoBehaviour
 
     void Update()
     {
+        FindAndAssignInstances();
         if (player != null) {
             float distanceToPlayer = Vector2.Distance(transform.position, player.position);
 
@@ -57,6 +59,22 @@ public class MonsterMovement : MonoBehaviour
         }
     }
     //고쳐야할듯
+    private void FindAndAssignInstances()
+    {
+        if (TB == null) {
+            ToolBar foundDayTimer = FindObjectOfType<ToolBar>();
+            if (foundDayTimer != null) {
+                TB = foundDayTimer;
+            }
+        }
+
+        if (gameManager == null) {
+            gamemanager foundGameManager = FindObjectOfType<gamemanager>();
+            if (foundGameManager != null) {
+                gameManager = foundGameManager;
+            }
+        }
+    }
     void ChasePlayer()
     {
         transform.Find("WatchingIcon").gameObject.SetActive(true);
