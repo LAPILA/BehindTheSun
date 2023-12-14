@@ -18,9 +18,15 @@ EditorBuildSettings:
     path: Assets/[1]Scene/Shelter/Shelter.unity
     guid: 51af2cd9bd2ec8c40b4ee7b446312616
   - enabled: 1
+    path: Assets/[1]Scene/Test_Scri_Village.unity
+    guid: 1fe1f169a75781e4aae0fac714455526
+  - enabled: 1
     path: Assets/[1]Scene/House1.unity
     guid: 407d3b407a1892742a1a6ea47db6fada
   - enabled: 1
+    path: Assets/[1]Scene/Test_Scri_Laboratory.unity
+    guid: 399761e549503dd44b38fc70f0a16715
+  - enabled: 0
     path: Assets/[1]Scene/Scri_Village.unity
     guid: 184df957c72dc074d8b33289a46c10ad
   - enabled: 1
