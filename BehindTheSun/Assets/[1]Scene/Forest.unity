@@ -1274,8 +1274,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f535f5fceb1b8e4bb1c8ef6f092b1f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transferMapName: Scri_Village
-  destinationX: 60
+  transferMapName: Test_Scri_Village
+  destinationX: 58
   destinationY: 1
 --- !u!1 &690194018
 GameObject:
