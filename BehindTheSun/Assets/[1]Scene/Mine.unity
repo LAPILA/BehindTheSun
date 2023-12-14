@@ -4301,6 +4301,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 85920409482547442, guid: 8bad6083f9c73b9448b6e0e366bf8dc6, type: 3}
+      propertyPath: MinDistance
+      value: 0.93607426
+      objectReference: {fileID: 0}
     - target: {fileID: 874124301598663121, guid: 8bad6083f9c73b9448b6e0e366bf8dc6, type: 3}
       propertyPath: m_ExcludeLayers.m_Bits
       value: 0
