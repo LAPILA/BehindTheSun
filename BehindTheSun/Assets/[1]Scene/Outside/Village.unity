@@ -151,7 +151,7 @@ MonoBehaviour:
     \uC788\uC5C8\uB098\uC694?"
   chatTr: {fileID: 1549376141}
   chatBoxPrefab: {fileID: 4773864279908912799, guid: 044ddeefc6042ae4f8310663bc25c1b1, type: 3}
-  NPCIsClose: 0
+  PlayerIsClose: 0
 --- !u!1 &306533655
 GameObject:
   m_ObjectHideFlags: 0
@@ -1434,6 +1434,14 @@ PrefabInstance:
     - target: {fileID: 1356725024196468530, guid: 5e26733fe04dbfa4196d92f9d4ff6a83, type: 3}
       propertyPath: m_Size.y
       value: 2.83
+      objectReference: {fileID: 0}
+    - target: {fileID: 1356725024196468530, guid: 5e26733fe04dbfa4196d92f9d4ff6a83, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -4808090956790165199, guid: bc25395353fd5664db891c4690915a6f, type: 3}
+    - target: {fileID: 1356725024196468530, guid: 5e26733fe04dbfa4196d92f9d4ff6a83, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4103740349974351552, guid: 5e26733fe04dbfa4196d92f9d4ff6a83, type: 3}
       propertyPath: m_LocalPosition.y
