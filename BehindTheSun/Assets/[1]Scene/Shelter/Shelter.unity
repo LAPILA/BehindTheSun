@@ -697,6 +697,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2267462049483407075, guid: 855097be855709e42a6ec0b8f1363d5b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a0c46bd0ce09e0d479ad2962809f906f, type: 3}
+    - target: {fileID: 5699589044861424151, guid: 855097be855709e42a6ec0b8f1363d5b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d4144e598af122e43859f5c913a83c22, type: 3}
     - target: {fileID: 6733883495085784664, guid: 855097be855709e42a6ec0b8f1363d5b, type: 3}
       propertyPath: m_Name
       value: YongGwang
@@ -705,6 +713,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7284047609535598358, guid: 855097be855709e42a6ec0b8f1363d5b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: dbd001af300d5284c88b557340ceea39, type: 3}
+    - target: {fileID: 7521143716663485948, guid: 855097be855709e42a6ec0b8f1363d5b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 69f676eb78e00d74bb442d5413b28e41, type: 3}
+    - target: {fileID: 7877184465757589994, guid: 855097be855709e42a6ec0b8f1363d5b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3e4fcc84a0ac95b429c56452575f6021, type: 3}
     - target: {fileID: 9166758782391719949, guid: 855097be855709e42a6ec0b8f1363d5b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -33.8

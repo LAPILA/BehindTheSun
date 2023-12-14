@@ -14,7 +14,7 @@ public class House1Start : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.C) && isGoTrigger == true)
         {
-            SceneManager.LoadScene("Scri_Village");
+            SceneManager.LoadScene("Test_Scri_Village");
         }
     }
     private void OnTriggerStay2D(Collider2D collision)
