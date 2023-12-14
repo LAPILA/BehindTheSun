@@ -94,7 +94,7 @@ public class gamemanager : MonoBehaviour
             ES_Dcrease_Time = 0;
         }
 
-        if (daytimer.IsNight && player.isOut && poison_time >= 1)
+        if (!daytimer.IsNight && player.isOut && poison_time >= 1)
         {
             Cr_HP_Value -= 3;
             poison_time = 0;
