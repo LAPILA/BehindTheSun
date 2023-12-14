@@ -3438,7 +3438,7 @@ GameObject:
   - component: {fileID: 1605738800}
   - component: {fileID: 1605738803}
   m_Layer: 0
-  m_Name: npc
+  m_Name: q
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3511,10 +3511,9 @@ MonoBehaviour:
   sentences:
   - "\uD29C\uD1A0\uB9AC\uC5BC \uC9C4\uD589 \uC911\uC785\uB2C8\uB2E4. \uBC29\uD5A5\uD0A4\uB97C
     \uD1B5\uD574 \uC6C0\uC9C1\uC774\uC2DC\uBA74 \uB3FC\uC694."
-  - "\uAC00\uB098\uB2E4"
   chatTr: {fileID: 213446169}
   chatBoxPrefab: {fileID: 4773864279908912799, guid: 044ddeefc6042ae4f8310663bc25c1b1, type: 3}
-  playerIsClose: 0
+  NPCIsClose: 0
 --- !u!4 &1605738802
 Transform:
   m_ObjectHideFlags: 0
@@ -10580,11 +10579,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5684197453559285379, guid: 5e26733fe04dbfa4196d92f9d4ff6a83, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.6
+      value: 6.76
       objectReference: {fileID: 0}
     - target: {fileID: 5684197453559285379, guid: 5e26733fe04dbfa4196d92f9d4ff6a83, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.79
+      value: -2.69
       objectReference: {fileID: 0}
     - target: {fileID: 5684197453559285379, guid: 5e26733fe04dbfa4196d92f9d4ff6a83, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10628,7 +10627,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6620782863792182701, guid: 5e26733fe04dbfa4196d92f9d4ff6a83, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8734899761015617655, guid: 5e26733fe04dbfa4196d92f9d4ff6a83, type: 3}
       propertyPath: isControl

@@ -1,18 +1,18 @@
 using System.Collections;
 using UnityEngine;
 
-public class NpcSentence : MonoBehaviour
+public class PlayerSentence : MonoBehaviour
 {
     private bool isTalking = false; // 대화 중인지 여부를 나타내는 변수 추가
     public string[] sentences;
     public Transform chatTr;
     public GameObject chatBoxPrefab;
-    public bool NPCIsClose;
+    public bool PlayerIsClose;
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.C) && !isTalking && NPCIsClose)
+        if (Input.GetKeyDown(KeyCode.C) && !isTalking && PlayerIsClose)
         {
             TalkNpc();
         }
@@ -22,14 +22,14 @@ public class NpcSentence : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            NPCIsClose = true;
+            PlayerIsClose = true;
         }
     }
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            NPCIsClose = false;
+            PlayerIsClose = false;
         }
     }
 
