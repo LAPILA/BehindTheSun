@@ -14,12 +14,12 @@ public class House1Start : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.C) && isGoTrigger == true)
         {
-            SceneManager.LoadScene("Village");
+            SceneManager.LoadScene("Scri_Village");
         }
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "dummy")
+        if (collision.gameObject.name == "Player")
         {
             isGoTrigger = true;
 
@@ -27,7 +27,7 @@ public class House1Start : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "dummy")
+        if (collision.gameObject.name == "Player")
         {
             isGoTrigger = false;
 
