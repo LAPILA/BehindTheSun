@@ -2314,7 +2314,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transferMapName: Scri_Laboratory
-  destinationX: -9
+  destinationX: -6
   destinationY: -4
 --- !u!4 &1324431615
 Transform:
@@ -2437,7 +2437,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 20}
   m_EdgeRadius: 0
 --- !u!114 &1475925988
 MonoBehaviour:
@@ -2452,8 +2452,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transferMapName: Forest
-  destinationX: -9
-  destinationY: -4
+  destinationX: -1
+  destinationY: -1
 --- !u!4 &1475925989
 Transform:
   m_ObjectHideFlags: 0
@@ -2463,7 +2463,7 @@ Transform:
   m_GameObject: {fileID: 1475925986}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.952646, y: -1.4355171, z: 0.03700387}
+  m_LocalPosition: {x: -17.07, y: -0.58, z: 0.03700387}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

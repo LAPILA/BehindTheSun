@@ -164,9 +164,7 @@ public class MonsterMovement : MonoBehaviour
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
     }
 
-   
-
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player_Bullets")
         {
@@ -199,6 +197,7 @@ public class MonsterMovement : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
 
     void Pistol_Damaged()
     {

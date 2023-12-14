@@ -108,8 +108,7 @@ public class MonsterPlayer : MonoBehaviour
         transform.eulerAngles = playerPosition.x > transform.position.x ? new Vector3(0, 0, 0) : new Vector3(0, 180, 0);
     }
 
-
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player_Bullets")
         {
@@ -155,6 +154,7 @@ public class MonsterPlayer : MonoBehaviour
             Destroy(gameObject);
         }
     }
+  
 
     void Pistol_Damaged()
     {

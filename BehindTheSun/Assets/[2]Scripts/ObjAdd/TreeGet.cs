@@ -32,14 +32,14 @@ public class TreeGet : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "player") {
+        if (collision.gameObject.tag == "Player") {
             treeEnter = true;
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "player") {
+        if (collision.gameObject.tag == "Player") {
             treeEnter = false;
         }
     }

@@ -9,7 +9,7 @@ public class DayTimer : MonoBehaviour
     public static DayTimer instance;
     [SerializeField] float setTime = 0.0f;
     int day;
-    bool IsNight;
+    public bool IsNight;
     public float dayTime;
     public float nightTime;
     public bool nextCheck;

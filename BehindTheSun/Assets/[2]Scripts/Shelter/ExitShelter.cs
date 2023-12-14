@@ -14,6 +14,10 @@ public class ExitShelter : MonoBehaviour
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.C) && isGoTrigger == true) {
+            Player.destinationX = 5.5f;
+            Player.destinationY = -2;
+            Player.Scene_moves = true;
+            Player.isOut = true;
             SceneManager.LoadScene("Mine");
         }
     }

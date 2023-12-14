@@ -23,6 +23,7 @@ public class TransferMap : MonoBehaviour
             playerController.currentMapName = transferMapName;
             playerController.destinationX = destinationX;
             playerController.destinationY = destinationY;
+            playerController.Scene_moves = true;
             SceneManager.LoadScene(transferMapName);
         }
     }

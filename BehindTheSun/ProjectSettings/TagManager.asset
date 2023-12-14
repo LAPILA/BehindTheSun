@@ -9,6 +9,8 @@ TagManager:
   - Bullet
   - Player_Bullets
   - move
+  - NPC
+  - ChatBox
   layers:
   - Default
   - TransparentFX
