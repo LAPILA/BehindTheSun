@@ -7,10 +7,7 @@ TagManager:
   - Enemy
   - ShelterSystem
   - Bullet
-  - Dust
-  - FieldItem
-  - ChatBox
-  - NPC
+  - Player_Bullets
   layers:
   - Default
   - TransparentFX
@@ -19,7 +16,7 @@ TagManager:
   - Water
   - UI
   - Ground
-  - 
+  - Enemy
   - 
   - Player
   - 

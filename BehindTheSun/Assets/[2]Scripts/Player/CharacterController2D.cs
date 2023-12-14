@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement; // 씬 관리를 위한 네임스페이스 사용
 public class CharacterController2D : MonoBehaviour
 {
     public static CharacterController2D instance; // 싱글톤 패턴을 위한 인스턴스
+    public gamemanager gameManager;
+    SpriteRenderer spriteRenderer;
     private const float GroundCheckRadius = 0.2f; // 지면 확인을 위한 반지름
 
     private float horizontal; // 수평 이동을 위한 변수
@@ -25,6 +27,11 @@ public class CharacterController2D : MonoBehaviour
     [SerializeField] private Rigidbody2D rb; // 물리 엔진 접근을 위한 Rigidbody2D 참조
     [SerializeField] private Transform groundCheck; // 지면 확인을 위한 Transform 참조
     [SerializeField] private LayerMask groundLayer; // 지면 레이어
+
+    private void Awake()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
 
     private void Start()
     {
@@ -89,6 +96,45 @@ public class CharacterController2D : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Bullet")
+        {
+            Debug.Log("개와 부디치다");
+            gameManager.Normal_Wolf_Damaged();
+            OnDamaged(collision.transform.position);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if ( collision.gameObject.tag == "Bullet")
+        {
+            Debug.Log("총에 맞다");
+            gameManager.Normal_Bullet_Damaged();
+            OnDamaged(collision.transform.position);
+        }
+    }
+
+    void OnDamaged(Vector2 targetPos)
+    {   
+        //
+        gameObject.layer = 11;
+
+        spriteRenderer.color = new Color(1, 1, 1, 0.4f);
+
+
+        int dirc = transform.position.x - targetPos.x > 0 ? 1 : -1;
+        rb.AddForce(new Vector2(dirc, 1)*5,ForceMode2D.Impulse);
+
+        Invoke("OffDamaged", 2);
+    }
+
+    void OffDamaged()
+    {
+        gameObject.layer = 9;
+        spriteRenderer.color = new Color(1, 1, 1, 1);
+    }
 
     private void MoveCharacter()
     {

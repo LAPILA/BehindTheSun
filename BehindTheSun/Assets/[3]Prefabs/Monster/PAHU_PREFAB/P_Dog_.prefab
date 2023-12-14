@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7935129778135218901}
   - component: {fileID: 600154573444772937}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: WatchingIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,8 +97,8 @@ GameObject:
   - component: {fileID: 5204391019674836504}
   - component: {fileID: 1351110195338919387}
   - component: {fileID: 7501307721777000420}
-  m_Layer: 0
-  m_Name: Dog_
+  m_Layer: 7
+  m_Name: P_Dog_
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -212,6 +212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8c98bc07ebf95b4abaddcd3d6ddeb5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   player: {fileID: 0}
   moveSpeed: 3
   leftBound: -5
@@ -241,7 +242,7 @@ BoxCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 2048
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -280,7 +281,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6566780415915390703}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GroundCheck_Dog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
