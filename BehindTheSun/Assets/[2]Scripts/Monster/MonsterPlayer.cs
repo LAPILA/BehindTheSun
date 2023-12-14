@@ -21,6 +21,7 @@ public class MonsterPlayer : MonoBehaviour
     }
     void Update()
     {
+        FindAndAssignInstances();
         RaycastHit2D groundInfo = Physics2D.Raycast(groundDetection.position, Vector2.down, 0.1f, groundLayer);
         RaycastHit2D groundInfo2 = Physics2D.Raycast(groundDetection2.position, Vector2.right, 0.1f, groundLayer);
 
@@ -57,7 +58,22 @@ public class MonsterPlayer : MonoBehaviour
 
     }
 
+    private void FindAndAssignInstances()
+    {
+        if (TB == null) {
+            ToolBar foundDayTimer = FindObjectOfType<ToolBar>();
+            if (foundDayTimer != null) {
+                TB = foundDayTimer;
+            }
+        }
 
+        if (gameManager == null) {
+            gamemanager foundGameManager = FindObjectOfType<gamemanager>();
+            if (foundGameManager != null) {
+                gameManager = foundGameManager;
+            }
+        }
+    }
     // ÁÂ¿ì ¹ÝÀü
     void Flip()
     {

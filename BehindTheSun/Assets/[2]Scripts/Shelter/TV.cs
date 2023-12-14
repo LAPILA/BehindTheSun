@@ -17,6 +17,7 @@ public class TV : MonoBehaviour
     }
     private void Update()
     {
+        FindAndAssignInstances();
         if (daytimer.nextCheck) {
             if (canuse > 1) {
                 canuse = 1;
@@ -40,7 +41,24 @@ public class TV : MonoBehaviour
             canuse--;
         }
     }
+    private void FindAndAssignInstances()
+    {
+        // DayTimer instance 찾기
+        if (daytimer == null) {
+            DayTimer foundDayTimer = FindObjectOfType<DayTimer>();
+            if (foundDayTimer != null) {
+                daytimer = foundDayTimer;
+            }
+        }
 
+        // GameManager instance 찾기
+        if (gamemanager == null) {
+            gamemanager foundGameManager = FindObjectOfType<gamemanager>();
+            if (foundGameManager != null) {
+                gamemanager = foundGameManager;
+            }
+        }
+    }
 
     private void OnTriggerStay2D(Collider2D collision)
     {

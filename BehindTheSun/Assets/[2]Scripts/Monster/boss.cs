@@ -14,6 +14,7 @@ public class boss : MonoBehaviour
 
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
         animator = GetComponent<Animator>();
         StartCoroutine(BossBehaviour());
     }

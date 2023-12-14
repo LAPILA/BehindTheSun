@@ -45,7 +45,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.43906564, g: 0.3762905, b: 0.5283019, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -103,10 +103,10 @@ MonoBehaviour:
     m_Bits: 512
   smoothSpeed: 3
   offset: {x: 0, y: 0}
-  limitMinX: -200
-  limitMaxX: 200
-  limitMinY: 0
-  limitMaxY: 0
+  limitMinX: -300
+  limitMaxX: 300
+  limitMinY: -10
+  limitMaxY: 11
 --- !u!114 &2550728806851540154
 MonoBehaviour:
   m_ObjectHideFlags: 0
