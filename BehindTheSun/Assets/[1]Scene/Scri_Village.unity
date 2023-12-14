@@ -1285,8 +1285,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transferMapName: Mine
-  destinationX: 45
-  destinationY: -2
+  destinationX: 42
+  destinationY: -1
 --- !u!61 &596226774
 BoxCollider2D:
   m_ObjectHideFlags: 0

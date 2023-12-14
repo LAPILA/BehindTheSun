@@ -23,6 +23,7 @@ public class CharacterController2D : MonoBehaviour
     public string currentMapName;
     public float destinationX = 0; // 시작 지점 x 좌표
     public float destinationY = 0; // 시작 지점 y 좌표
+    public bool Scene_moves = false;
 
     [SerializeField] private Rigidbody2D rb; // 물리 엔진 접근을 위한 Rigidbody2D 참조
     [SerializeField] private Transform groundCheck; // 지면 확인을 위한 Transform 참조
@@ -53,6 +54,11 @@ public class CharacterController2D : MonoBehaviour
 
     void Update()
     {
+        if (Scene_moves)
+        {
+            Player_scene_move();
+            Scene_moves = false;
+        }
         
         if (isControl) {
             // 이동, 점프, 액션 처리
@@ -158,5 +164,10 @@ public class CharacterController2D : MonoBehaviour
             localScale.x *= -1f;
             transform.localScale = localScale;
         }
+    }
+
+    public void Player_scene_move()
+    {
+        transform.position = new Vector3(destinationX, destinationY, transform.position.z);
     }
 }

@@ -1275,7 +1275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transferMapName: Scri_Village
-  destinationX: 62
+  destinationX: 60
   destinationY: 1
 --- !u!1 &690194018
 GameObject:
