@@ -2,6 +2,10 @@ using UnityEngine;
 
 public class MonsterMovement : MonoBehaviour
 {
+    public ToolBar TB;
+    public gamemanager gameManager;
+    int Monster_HP = 40;
+
     public Transform player;
     public float moveSpeed = 8f;
     public float leftBound = -5f;
@@ -140,5 +144,57 @@ public class MonsterMovement : MonoBehaviour
     void CheckGround()
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+
+        if (collision.gameObject.tag == "Player")
+        {
+            // 피스톨
+            if (gameManager.pistol_use)
+            {
+                Debug.Log("피스톨을 맞췄다");
+                gameManager.pistol_use = false;
+                Pistol_Damaged();
+
+            }
+            // 총2
+            if (gameManager.shotgun_use)
+            {
+                gameManager.shotgun_use = false;
+                Shotgun_Damaged();
+            }
+            // 총3
+            if (gameManager.rifle_use)
+            {
+                gameManager.rifle_use = false;
+                Rifle_Damaged();
+            }
+        }
+
+        if (Monster_HP <= 0)
+        {
+            TB.Meet_quantity += 3;
+
+            Destroy(gameObject);
+        }
+        // 체력 0 이하가 되면 디스트로이
+    }
+
+    void Pistol_Damaged()
+    {
+        Monster_HP -= 25;
+        //피스톨에 데미지 입는다
+    }
+
+    void Shotgun_Damaged()
+    {
+        Monster_HP -= 50;
+    }
+
+    void Rifle_Damaged()
+    {
+        Monster_HP -= 40;
     }
 }

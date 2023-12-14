@@ -57,12 +57,12 @@ public class Build : MonoBehaviour
     private void GenBuild()
     {
         if (Resource.Instance.GetResourceQuantity("µ¹") >= 50 &&
-            Resource.Instance.GetResourceQuantity("Ã¶") >= 50 &&
-            Resource.Instance.GetResourceQuantity("±Ý") >= 100) 
+            Resource.Instance.GetResourceQuantity("Á¦·ÃµÈ Ã¶") >= 50 &&
+            Resource.Instance.GetResourceQuantity("Á¦·ÃµÈ ±Ý") >= 100) 
             {
             Resource.Instance.RemoveResource("µ¹", 50);
-            Resource.Instance.RemoveResource("Ã¶", 50);
-            Resource.Instance.RemoveResource("±Ý", 100);
+            Resource.Instance.RemoveResource("Á¦·ÃµÈ Ã¶", 50);
+            Resource.Instance.RemoveResource("Á¦·ÃµÈ ±Ý", 100);
             generator.SetActive(true);
             genButton.interactable = false;
         }
@@ -74,11 +74,11 @@ public class Build : MonoBehaviour
     private void DrillBuild()
     {
         if (Resource.Instance.GetResourceQuantity("µ¹") >= 200 &&
-            Resource.Instance.GetResourceQuantity("Ã¶") >= 100 &&
-            Resource.Instance.GetResourceQuantity("±Ý") >= 50) {
+            Resource.Instance.GetResourceQuantity("Á¦·ÃµÈ Ã¶") >= 100 &&
+            Resource.Instance.GetResourceQuantity("Á¦·ÃµÈ ±Ý") >= 50) {
             Resource.Instance.RemoveResource("µ¹", 200);
-            Resource.Instance.RemoveResource("Ã¶", 100);
-            Resource.Instance.RemoveResource("±Ý", 50);
+            Resource.Instance.RemoveResource("Á¦·ÃµÈ Ã¶", 100);
+            Resource.Instance.RemoveResource("Á¦·ÃµÈ ±Ý", 50);
             Drill.SetActive(true);
             DrillButton.interactable = false;
         }
@@ -90,9 +90,9 @@ public class Build : MonoBehaviour
     private void YongGwangBuild()
     {
         if (Resource.Instance.GetResourceQuantity("µ¹") >= 100 &&
-            Resource.Instance.GetResourceQuantity("Ã¶") >= 50) {
+            Resource.Instance.GetResourceQuantity("Á¦·ÃµÈ Ã¶") >= 50) {
             Resource.Instance.RemoveResource("µ¹", 100);
-            Resource.Instance.RemoveResource("Ã¶", 50);
+            Resource.Instance.RemoveResource("Á¦·ÃµÈ Ã¶", 50);
             YongGwang.SetActive(true);
             YongGwangButton.interactable = false;
         }
@@ -104,11 +104,11 @@ public class Build : MonoBehaviour
     private void TVBuild()
     {
         if (Resource.Instance.GetResourceQuantity("µ¹") >= 50 &&
-            Resource.Instance.GetResourceQuantity("Ã¶") >= 100 &&
-            Resource.Instance.GetResourceQuantity("±Ý") >= 100) {
+            Resource.Instance.GetResourceQuantity("Á¦·ÃµÈ Ã¶") >= 100 &&
+            Resource.Instance.GetResourceQuantity("Á¦·ÃµÈ ±Ý") >= 100) {
             Resource.Instance.RemoveResource("µ¹", 50);
-            Resource.Instance.RemoveResource("Ã¶", 100);
-            Resource.Instance.RemoveResource("±Ý", 100);
+            Resource.Instance.RemoveResource("Á¦·ÃµÈ Ã¶", 100);
+            Resource.Instance.RemoveResource("Á¦·ÃµÈ ±Ý", 100);
             TV.SetActive(true);
             TVButton.interactable = false;
         }

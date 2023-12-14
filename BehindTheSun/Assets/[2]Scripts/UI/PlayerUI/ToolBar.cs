@@ -8,6 +8,9 @@ public class ToolBar : MonoBehaviour
 {
     public static ToolBar Instance { get; private set; }
     public gamemanager gameManager;
+    public Player_attack Player_Attack;
+
+    int KP;
 
     public GameObject highlight_1;
     public GameObject highlight_2;
@@ -30,6 +33,9 @@ public class ToolBar : MonoBehaviour
     public Text Meet_num;
     public Text Canned_Food_num;
     public Text Antidepressants_num;
+
+    bool Rifle_Unlock;
+    bool Shotgun_Unlock;
 
     bool PickAxe_Active;
     bool Pistol_Active;
@@ -77,10 +83,24 @@ public class ToolBar : MonoBehaviour
         Meet_Active = false;
         Canned_Food_Active = false;
         Antidepressants_Active = false;
+        Rifle_Unlock = false;
+        Shotgun_Unlock = false;
     }
 
     void Update()
     {
+        KP = gameManager.Return_KP();
+
+        if (!Rifle_Unlock && KP >= 20)
+        {
+            Rifle_Unlock = true;
+        }
+
+        if(!Shotgun_Unlock && KP >= 40)
+        {
+            Shotgun_Unlock = true;
+        }
+
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             Highright_All_off();
@@ -166,45 +186,54 @@ public class ToolBar : MonoBehaviour
         }
 
         //피스톨 사용
-        if (Input.GetKeyDown(KeyCode.Z) && Pistol_Active)
+        if (Input.GetKeyDown(KeyCode.Z) && Pistol_Active && !gameManager.pistol_use)
         {
             if(Pistol_bullet > 0)
             {
                 Debug.Log("피스톨 사용");
+                Player_Attack.Shoot();
+                gameManager.Use_Pistol();
                 Pistol_bullet--;
             }
             else
             {
                 Debug.Log("총알 부족");
             }
+            Invoke("Reload_gun", 1);
         }
 
         //라이플 사용
-        if (Input.GetKeyDown(KeyCode.Z) && Rifle_Active)
+        if (Rifle_Unlock &&Input.GetKeyDown(KeyCode.Z) && Rifle_Active && !gameManager.rifle_use)
         {
             if (Rifle_bullet > 0)
             {
                 Debug.Log("라이플 사용");
+                Player_Attack.Shoot();
+                gameManager.Use_Riflegun();
                 Rifle_bullet--;
             }
             else
             {
                 Debug.Log("총알 부족");
             }
+            Invoke("Reload_gun", 1);
         }
 
         //샷건 사용
-        if (Input.GetKeyDown(KeyCode.Z) && Shotgun_Active)
+        if (Shotgun_Unlock && Input.GetKeyDown(KeyCode.Z) && Shotgun_Active && !gameManager.shotgun_use)
         {
             if (Shotgun_bullet > 0)
             {
                 Debug.Log("샷건 사용");
+                Player_Attack.Shoot();
+                gameManager.Use_Shotgun();
                 Shotgun_bullet--;
             }
             else
             {
                 Debug.Log("총알 부족");
             }
+            Invoke("Reload_gun", 1);
         }
 
         //진통제 사용
@@ -335,5 +364,12 @@ public class ToolBar : MonoBehaviour
         Meet_Active = false;
         Canned_Food_Active = false;
         Antidepressants_Active = false;
+    }
+
+    public void Reload_gun()
+    {
+        gameManager.pistol_use = false;
+        gameManager.shotgun_use = false;
+        gameManager.rifle_use = false;
     }
 }
