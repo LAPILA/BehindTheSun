@@ -19,7 +19,7 @@ public class GoHouse3 : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "dummy")
+        if (collision.gameObject.name == "Player")
         {
             isGoTrigger = true;
 
@@ -27,7 +27,7 @@ public class GoHouse3 : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "dummy")
+        if (collision.gameObject.name == "Player")
         {
             isGoTrigger = false;
 

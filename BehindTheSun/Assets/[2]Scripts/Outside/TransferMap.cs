@@ -19,7 +19,7 @@ public class TransferMap : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "dummy") {
+        if (collision.gameObject.name == "Player") {
             playerController.currentMapName = transferMapName;
             playerController.destinationX = destinationX;
             playerController.destinationY = destinationY;

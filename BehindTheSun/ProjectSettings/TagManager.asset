@@ -8,6 +8,7 @@ TagManager:
   - ShelterSystem
   - Bullet
   - Player_Bullets
+  - move
   layers:
   - Default
   - TransparentFX
@@ -21,7 +22,7 @@ TagManager:
   - Player
   - 
   - Damaged_Player
-  - 
+  - Move
   - 
   - 
   - 
