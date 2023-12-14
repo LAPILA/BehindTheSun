@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GoHouse1 : MonoBehaviour
+public class House1Start : MonoBehaviour
 {
     private CharacterController2D Player;
     private bool isGoTrigger = false;
@@ -14,7 +14,7 @@ public class GoHouse1 : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.C) && isGoTrigger == true)
         {
-            SceneManager.LoadScene("House1");
+            SceneManager.LoadScene("Village");
         }
     }
     private void OnTriggerStay2D(Collider2D collision)
@@ -33,4 +33,5 @@ public class GoHouse1 : MonoBehaviour
 
         }
     }
+
 }
