@@ -1123,6 +1123,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Matter_Inventory: {fileID: 750728653255579806}
   Matter_resource: {fileID: 8239078931649488563}
+  pistol_use: 0
+  shotgun_use: 0
+  rifle_use: 0
   HP_Gauge: {fileID: 1808320048723207989}
   ES_Gauge: {fileID: 865326166939716605}
   BP_Gauge: {fileID: 7476676768298738717}

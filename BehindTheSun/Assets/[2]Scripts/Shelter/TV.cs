@@ -33,9 +33,9 @@ public class TV : MonoBehaviour
         }
         if((canuse>=1)&&GenGage && isInteractable&& Input.GetKeyDown(KeyCode.C)) {
             //¾É¾Æ¼­ TVº¸´Â PlayerAnimation
-            gamemanager.Cr_ES_Value += 20;
-            if (gamemanager.Cr_ES_Value > gamemanager.MAX_ES_Value) {
-                gamemanager.Cr_ES_Value = gamemanager.MAX_ES_Value;
+            gamemanager.Cr_BP_Value += 20;
+            if (gamemanager.Cr_BP_Value > gamemanager.MAX_BP_Value) {
+                gamemanager.Cr_BP_Value = gamemanager.MAX_BP_Value;
             }
             canuse--;
         }

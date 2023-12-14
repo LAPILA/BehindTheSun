@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
@@ -12,9 +13,18 @@ public class gamemanager : MonoBehaviour
 
     bool MI_Active;
 
+    int kill_point = 0;
+
+    public bool pistol_use = false;
+    public bool shotgun_use = false;
+    public bool rifle_use = false;
+
     public Slider HP_Gauge; // hp 바
     public Slider ES_Gauge; // es 바
     public Slider BP_Gauge; // bp 바
+
+    float ES_Dcrease_Time;
+    float BP_Dcrease_Time;
 
     public Text Wood_Num;
     public Text Stone_Num;
@@ -26,11 +36,11 @@ public class gamemanager : MonoBehaviour
     public Text Rough_Gold_Num;
 
     public float MAX_HP_Value = 100;
-    public float Cr_HP_Value = 10;
+    public float Cr_HP_Value = 50;
     public float MAX_ES_Value = 200;
-    public float Cr_ES_Value = 10;
+    public float Cr_ES_Value = 50;
     public float MAX_BP_Value = 100;
-    public float Cr_BP_Value = 10;
+    public float Cr_BP_Value = 50;
 
     public int Wood_quantity = 100;
     public int Stone_quantity = 100;
@@ -41,7 +51,6 @@ public class gamemanager : MonoBehaviour
     public int Rough_Iron_quantity = 100;
     public int Rough_Gold_quantity = 100;
 
-    private int enemyKillCount = 0;
     void Start()
     {
         MI_Active = false;
@@ -64,6 +73,21 @@ public class gamemanager : MonoBehaviour
         {
             MI_Active = !MI_Active;
             Matter_Inventory.SetActive(MI_Active);
+        }
+
+        BP_Dcrease_Time += Time.deltaTime;
+        ES_Dcrease_Time += Time.deltaTime;
+
+        if(BP_Dcrease_Time > 60.0f)
+        {
+            Dcrease_BP();
+            BP_Dcrease_Time = 0;
+        }
+
+        if(ES_Dcrease_Time > 60.0f)
+        {
+            Dcrease_ES();
+            ES_Dcrease_Time = 0;
         }
     }
 
@@ -90,6 +114,16 @@ public class gamemanager : MonoBehaviour
         Coral_Num.text = Coral_quantity.ToString();
         Rough_Iron_Num.text = Rough_Iron_quantity.ToString();
         Rough_Gold_Num.text = Rough_Gold_quantity.ToString();
+    }
+
+    void Dcrease_BP()
+    {
+        Cr_BP_Value -= 2;
+    }
+
+    void Dcrease_ES()
+    {
+        Cr_ES_Value -= 2;
     }
 
     public void Use_PainKiller()
@@ -145,4 +179,41 @@ public class gamemanager : MonoBehaviour
             Cr_BP_Value = MAX_BP_Value;
         }
     }
+
+    public void Normal_Bullet_Damaged()
+    {
+        Cr_HP_Value -= 10;
+        //0이하 되면 게임오버
+    }
+
+    public void Normal_Wolf_Damaged()
+    {
+        Cr_HP_Value -= 10;
+    }
+
+    public void Use_Pistol()
+    {
+        pistol_use = true;
+    }
+
+    public void Use_Shotgun()
+    {
+        shotgun_use = true;
+    }
+
+    public void Use_Riflegun()
+    {
+        rifle_use = true;
+    }
+
+    public void Plus_KillPoint()
+    {
+        kill_point++;
+    }
+
+    public int Return_KP()
+    {
+        return kill_point;
+    }
+
 }
