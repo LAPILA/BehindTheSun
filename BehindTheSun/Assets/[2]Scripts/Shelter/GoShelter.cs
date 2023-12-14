@@ -13,6 +13,7 @@ public class GoShelter : MonoBehaviour
     private void Update()
     {
         if(Input.GetKeyDown(KeyCode.C)&& isGoTrigger == true) {
+            Player.isOut = false;
             SceneManager.LoadScene("Shelter");
         }
     }

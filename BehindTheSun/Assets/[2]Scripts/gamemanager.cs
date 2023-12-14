@@ -8,6 +8,8 @@ using UnityEngine.UI;
 public class gamemanager : MonoBehaviour
 {
     public static gamemanager instance;
+    public CharacterController2D player;
+    public DayTimer daytimer;
     public GameObject Matter_Inventory;
     public Resource Matter_resource;
 
@@ -25,6 +27,7 @@ public class gamemanager : MonoBehaviour
 
     float ES_Dcrease_Time;
     float BP_Dcrease_Time;
+    float poison_time;
 
     public Text Wood_Num;
     public Text Stone_Num;
@@ -77,6 +80,7 @@ public class gamemanager : MonoBehaviour
 
         BP_Dcrease_Time += Time.deltaTime;
         ES_Dcrease_Time += Time.deltaTime;
+        poison_time += Time.deltaTime;
 
         if(BP_Dcrease_Time > 60.0f)
         {
@@ -88,6 +92,12 @@ public class gamemanager : MonoBehaviour
         {
             Dcrease_ES();
             ES_Dcrease_Time = 0;
+        }
+
+        if (daytimer.IsNight && player.isOut && poison_time >= 1)
+        {
+            Cr_HP_Value -= 3;
+            poison_time = 0;
         }
     }
 

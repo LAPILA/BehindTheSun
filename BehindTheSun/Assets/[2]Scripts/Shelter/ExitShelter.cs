@@ -17,6 +17,7 @@ public class ExitShelter : MonoBehaviour
             Player.destinationX = 5.5f;
             Player.destinationY = -2;
             Player.Scene_moves = true;
+            Player.isOut = true;
             SceneManager.LoadScene("Mine");
         }
     }

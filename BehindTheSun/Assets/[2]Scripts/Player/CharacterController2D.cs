@@ -9,6 +9,8 @@ public class CharacterController2D : MonoBehaviour
     SpriteRenderer spriteRenderer;
     private const float GroundCheckRadius = 0.2f; // 지면 확인을 위한 반지름
 
+    public bool isOut = true;
+
     private float horizontal; // 수평 이동을 위한 변수
     public float speed = 9f; // 이동 속도
     public float jumpingPower = 15f; // 점프 힘
