@@ -164,10 +164,11 @@ public class MonsterMovement : MonoBehaviour
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
-    {
+   
 
-        if (collision.gameObject.tag == "Player")
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player_Bullets")
         {
             // 피스톨
             if (gameManager.pistol_use)
@@ -197,7 +198,6 @@ public class MonsterMovement : MonoBehaviour
 
             Destroy(gameObject);
         }
-        // 체력 0 이하가 되면 디스트로이
     }
 
     void Pistol_Damaged()

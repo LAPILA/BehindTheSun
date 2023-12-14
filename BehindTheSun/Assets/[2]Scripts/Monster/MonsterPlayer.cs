@@ -108,19 +108,18 @@ public class MonsterPlayer : MonoBehaviour
         transform.eulerAngles = playerPosition.x > transform.position.x ? new Vector3(0, 0, 0) : new Vector3(0, 180, 0);
     }
 
- 
-    private void OnTriggerStay2D(Collider2D collision)
-    {
 
-        if (collision.gameObject.tag == "Player")
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player_Bullets")
         {
             // 피스톨
             if (gameManager.pistol_use)
             {
-                Debug.Log("피스톨을 맞았다");
+                Debug.Log("피스톨을 맞췄다");
                 gameManager.pistol_use = false;
                 Pistol_Damaged();
-                
+
             }
             // 총2
             if (gameManager.shotgun_use)
@@ -136,14 +135,15 @@ public class MonsterPlayer : MonoBehaviour
             }
         }
 
-        if(Monster_HP <= 0)
+        if (Monster_HP <= 0)
         {
             int drop_random = Random.Range(1, 11);
 
-            if(drop_random <= 5)
+            if (drop_random <= 5)
             {
                 TB.Pistol_bullet += 12;
-            }else if(drop_random <= 8)
+            }
+            else if (drop_random <= 8)
             {
                 TB.Rifle_bullet += 12;
             }
@@ -154,7 +154,6 @@ public class MonsterPlayer : MonoBehaviour
 
             Destroy(gameObject);
         }
-        // 체력 0 이하가 되면 디스트로이
     }
 
     void Pistol_Damaged()
