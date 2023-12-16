@@ -28,13 +28,14 @@ public class CameraFollow : MonoBehaviour
 
     private void LateUpdate()
     {
+        
         FindTarget(); // 매 LateUpdate마다 타겟을 찾아서 추적
 
         if (target != null) {
             Vector3 desiredPosition = new Vector3(
                 Mathf.Clamp(target.position.x + offset.x, limitMinX + cameraHalfWidth, limitMaxX - cameraHalfWidth),   // X
                 transform.position.y, // 이제 Y는 고정
-                transform.position.z); // Z 위치는 현재와 동일
+                -10); // Z 위치는 현재와 동일
 
             // 카메라의 위치를 부드럽게 이동
             transform.position = Vector3.Lerp(transform.position, desiredPosition, Time.deltaTime * smoothSpeed);

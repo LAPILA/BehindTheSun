@@ -19,8 +19,10 @@ public class TransferMap : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "Player") {
+        if (collision.gameObject.tag == "Player") {
+            Debug.Log("1123æ¿¿Ãµø ¿€µø");
             playerController.currentMapName = transferMapName;
+            Debug.Log(playerController.currentMapName);
             playerController.destinationX = destinationX;
             playerController.destinationY = destinationY;
             playerController.Scene_moves = true;

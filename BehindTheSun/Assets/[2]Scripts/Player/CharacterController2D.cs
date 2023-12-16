@@ -171,5 +171,8 @@ public class CharacterController2D : MonoBehaviour
     public void Player_scene_move()
     {
         transform.position = new Vector3(destinationX, destinationY, transform.position.z);
+        destinationX = 0;
+        destinationY = 0;
+        currentMapName = " ";
     }
 }

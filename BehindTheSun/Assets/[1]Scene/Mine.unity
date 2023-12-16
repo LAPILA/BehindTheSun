@@ -3682,8 +3682,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transferMapName: Test_Scri_Village
-  destinationX: -35
-  destinationY: 9
+  destinationX: 3
+  destinationY: 1
 --- !u!114 &1396418700 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7728912530893580456, guid: c3650e1adfacc324996786ccd580e4c8, type: 3}
