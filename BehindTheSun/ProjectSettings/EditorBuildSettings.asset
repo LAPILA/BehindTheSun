@@ -9,28 +9,31 @@ EditorBuildSettings:
     path: Assets/[1]Scene/GameTitle/MainTitle.unity
     guid: ce41c029ef236604e805280fd02ac563
   - enabled: 1
-    path: Assets/[1]Scene/Mine.unity
+    path: Assets/[1]Scene/UsingScene/Mine.unity
     guid: 3fce4b14a1605644c814098cb0806f88
   - enabled: 1
     path: Assets/[1]Scene/Shelter/Shelter.unity
     guid: 51af2cd9bd2ec8c40b4ee7b446312616
   - enabled: 1
-    path: Assets/[1]Scene/Test_Scri_Village.unity
+    path: Assets/[1]Scene/UsingScene/Test_Scri_Village.unity
     guid: 1fe1f169a75781e4aae0fac714455526
   - enabled: 1
-    path: Assets/[1]Scene/Forest.unity
+    path: Assets/[1]Scene/UsingScene/Forest.unity
     guid: f9b1d789aeb2db941be6e4a862d52c1d
   - enabled: 1
-    path: Assets/[1]Scene/House1.unity
+    path: Assets/[1]Scene/UsingScene/Hidden_Ending.unity
+    guid: 5cf500c157a7e85478db33252a18e63c
+  - enabled: 1
+    path: Assets/[1]Scene/UsingScene/House1.unity
     guid: 407d3b407a1892742a1a6ea47db6fada
   - enabled: 1
-    path: Assets/[1]Scene/House2.unity
+    path: Assets/[1]Scene/UsingScene/House2.unity
     guid: 62b9e02186445b54798c2e2676a13906
   - enabled: 1
-    path: Assets/[1]Scene/House3.unity
+    path: Assets/[1]Scene/UsingScene/House3.unity
     guid: 5828fa2e4c81d4040b791469a101baa7
   - enabled: 1
-    path: Assets/[1]Scene/Test_Scri_Laboratory.unity
+    path: Assets/[1]Scene/UsingScene/Test_Scri_Laboratory.unity
     guid: 399761e549503dd44b38fc70f0a16715
   - enabled: 0
     path: Assets/[1]Scene/Scri_Village.unity
@@ -39,15 +42,18 @@ EditorBuildSettings:
     path: Assets/[1]Scene/Scri_Laboratory.unity
     guid: f79a715588e0bc544ae3ecd0a5d7d6fd
   - enabled: 1
-    path: Assets/[1]Scene/Test_Scri_Village.unity
+    path: Assets/[1]Scene/UsingScene/Test_Scri_Village.unity
     guid: 1fe1f169a75781e4aae0fac714455526
   - enabled: 1
-    path: Assets/[1]Scene/Test_Scri_Boss.unity
+    path: Assets/[1]Scene/UsingScene/Test_Scri_Boss.unity
     guid: d0eb66b5951813f45bdc2bebf8823d0e
+  - enabled: 1
+    path: Assets/[1]Scene/UsingScene/Test_Scri_Boss_fight.unity
+    guid: 4607016976f40a740b91b60e6c5eb0ad
   - enabled: 0
     path: Assets/[1]Scene/Scri_Boss.unity
     guid: b95cb6aa3acb156439d1166a1c0761ce
   - enabled: 1
-    path: Assets/[1]Scene/ForestToLabor.unity
+    path: Assets/[1]Scene/UsingScene/ForestToLabor.unity
     guid: c7c5912825399824a89879e987476a82
   m_configObjects: {}

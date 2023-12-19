@@ -108,7 +108,7 @@ public class CharacterController2D : MonoBehaviour
     {
         if(collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Bullet")
         {
-            Debug.Log("개와 부디치다");
+
             gameManager.Normal_Wolf_Damaged();
             OnDamaged(collision.transform.position);
         }
@@ -122,9 +122,14 @@ public class CharacterController2D : MonoBehaviour
             gameManager.Normal_Bullet_Damaged();
             OnDamaged(collision.transform.position);
         }
+        if( collision.gameObject.name == "Boss_Attack")
+        {
+            gameManager.Boss_Damaged();
+            OnDamaged(collision.transform.position);
+        }
     }
 
-    void OnDamaged(Vector2 targetPos)
+    public void OnDamaged(Vector2 targetPos)
     {   
         //
         gameObject.layer = 11;
@@ -171,8 +176,5 @@ public class CharacterController2D : MonoBehaviour
     public void Player_scene_move()
     {
         transform.position = new Vector3(destinationX, destinationY, transform.position.z);
-        destinationX = 0;
-        destinationY = 0;
-        currentMapName = " ";
     }
 }

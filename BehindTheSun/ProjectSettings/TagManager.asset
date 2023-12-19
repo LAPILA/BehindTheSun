@@ -11,6 +11,7 @@ TagManager:
   - move
   - NPC
   - ChatBox
+  - Boss
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - UI
   - Ground
   - Enemy
-  - 
+  - Boss
   - Player
   - 
   - Damaged_Player

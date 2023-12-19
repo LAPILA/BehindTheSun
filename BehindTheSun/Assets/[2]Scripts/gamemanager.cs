@@ -39,11 +39,11 @@ public class gamemanager : MonoBehaviour
     public Text Rough_Gold_Num;
 
     public float MAX_HP_Value = 100;
-    public float Cr_HP_Value = 50;
+    public float Cr_HP_Value = 100;
     public float MAX_ES_Value = 200;
-    public float Cr_ES_Value = 50;
+    public float Cr_ES_Value = 100;
     public float MAX_BP_Value = 100;
-    public float Cr_BP_Value = 50;
+    public float Cr_BP_Value = 100;
 
     public int Wood_quantity = 100;
     public int Stone_quantity = 100;
@@ -53,6 +53,10 @@ public class gamemanager : MonoBehaviour
     public int Coral_quantity = 100;
     public int Rough_Iron_quantity = 100;
     public int Rough_Gold_quantity = 100;
+
+    public bool laboratoy_open = false;
+    public bool hidden_ending_open = false;
+
 
     void Start()
     {
@@ -94,7 +98,7 @@ public class gamemanager : MonoBehaviour
             ES_Dcrease_Time = 0;
         }
 
-        if (daytimer.IsNight && player.isOut && poison_time >= 1)
+        if (!daytimer.IsNight && player.isOut && poison_time >= 1)
         {
             Cr_HP_Value -= 3;
             poison_time = 0;
@@ -199,6 +203,11 @@ public class gamemanager : MonoBehaviour
     public void Normal_Wolf_Damaged()
     {
         Cr_HP_Value -= 10;
+    }
+
+    public void Boss_Damaged()
+    {
+        Cr_HP_Value -= 20;
     }
 
     public void Use_Pistol()

@@ -8,6 +8,7 @@ public class PlayerSentence : MonoBehaviour
     public Transform chatTr;
     public GameObject chatBoxPrefab;
     public bool PlayerIsClose;
+    gamemanager GM;
 
     // Update is called once per frame
     void Update()
@@ -37,7 +38,12 @@ public class PlayerSentence : MonoBehaviour
     {
         isTalking = true; // 대화 시작 시 대화 중 상태로 변경
 
+
         GameObject existingChatBox = GameObject.FindGameObjectWithTag("ChatBox"); // 이미 존재하는 대화창 확인
+
+        GM = FindObjectOfType<gamemanager>();
+
+        GM.hidden_ending_open = true;
 
         if (existingChatBox == null) // 대화창이 없다면 새로운 대화창 생성
         {

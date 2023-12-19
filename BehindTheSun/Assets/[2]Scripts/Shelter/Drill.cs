@@ -59,7 +59,7 @@ public class Drill : MonoBehaviour
             else if (randomValue <= 70f) resourceName = "¼®Åº";
             else if (randomValue <= 85f) resourceName = "Ã¶";
             else if (randomValue <= 95f) resourceName = "±Ý";
-            else resourceName = "ÃÊ¼®";
+            else resourceName = "Ã¶";
             //0À¸·Î ÃÊ±âÈ­ÇÑ ÀÓ½Ã µñ¼Å³Ê¸® °ªÀÇ ÀÌ¸§¿¡ 
             if (!temporaryResources.ContainsKey(resourceName)) {
                 temporaryResources[resourceName] = 0;
