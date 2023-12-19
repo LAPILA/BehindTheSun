@@ -5,6 +5,7 @@ public class TreeGet : MonoBehaviour
 {
     bool treeEnter = false;
     bool isShaking = false; // 쉐이크 여부 체크
+    int tree_count = 3;
     int RandomTree = 0;
     int attackCount = 0;
 
@@ -26,7 +27,13 @@ public class TreeGet : MonoBehaviour
                 Resource.Instance.AddResource("나무", RandomTree);
                 StartCoroutine(ShakeObject(initialPosition, 0.1f, 0.05f, 0.05f, 0.2f));
                 attackCount = 0;
+                tree_count--;
             }
+        }
+
+        if(tree_count <= 0)
+        {
+            Destroy(gameObject);
         }
     }
 
