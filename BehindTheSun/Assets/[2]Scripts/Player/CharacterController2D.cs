@@ -8,6 +8,7 @@ public class CharacterController2D : MonoBehaviour
     public gamemanager gameManager;
     SpriteRenderer spriteRenderer;
     private const float GroundCheckRadius = 0.2f; // 지면 확인을 위한 반지름
+    public GameObject menu;
 
     public bool isOut = true;
 
@@ -66,10 +67,12 @@ public class CharacterController2D : MonoBehaviour
             // 이동, 점프, 액션 처리
             HandleMovement();
             HandleJumping();
+            
 
             // 캐릭터 방향 전환
             Flip();
         }
+        HandleActions();
     }
 
     private void FixedUpdate()
@@ -102,6 +105,30 @@ public class CharacterController2D : MonoBehaviour
             isJumping = false;
             animator.SetBool("isJump", isJumping);
         }
+    }
+
+    public void HandleActions()
+    {
+        
+        if (Input.GetButtonDown("Cancel"))
+        {
+            //Debug.Log("ESC설정");
+            if (menu.activeSelf)
+            {
+                menu.SetActive(false);
+            }
+            else
+            {
+                menu.SetActive(true);
+            }
+            Debug.Log("ESC설정");
+        }
+    }
+    
+
+    public void GameExit()
+    {
+        Application.Quit();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

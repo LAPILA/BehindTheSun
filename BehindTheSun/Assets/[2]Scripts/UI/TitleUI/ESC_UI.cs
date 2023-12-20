@@ -90,15 +90,7 @@ public class ESC_UI : MonoBehaviour
 
     private void HandleActions()
     {
-        // 공격, 설정, 상호작용 등 다른 액션 처리
-        // 공격 (Z 키)
-        if (Input.GetKeyDown(KeyCode.Z))
-        {
-            Debug.Log("Z공격");
-            // 공격 로직 추가 예정
-        }
-
-        // 설정 (Esc 키)
+        
         if (Input.GetButtonDown("Cancel"))
         {
             if (menu.activeSelf)
@@ -111,13 +103,6 @@ public class ESC_UI : MonoBehaviour
             }
             Debug.Log("ESC설정");
             // 설정 로직 추가 예정
-        }
-
-        // 상호작용 (C 키)
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            Debug.Log("C상호작용");
-            // 상호작용 로직 추가 예정
         }
     }
 

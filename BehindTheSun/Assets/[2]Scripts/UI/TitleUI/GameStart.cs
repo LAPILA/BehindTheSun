@@ -9,6 +9,6 @@ public class GameStart : MonoBehaviour
    
     public void OnClickGamestart()
     {
-        SceneManager.LoadScene("Mine");
+        SceneManager.LoadScene("PrologueMine");
     }
 }

@@ -17,8 +17,8 @@ public class DayTimer : MonoBehaviour
     void Start()
     {
         //낮인 상태로 시작 설정
-        IsNight = false;
-        setTime = 0.0f;
+        IsNight = true;
+        setTime = 480.0f;
         day = 0;
         dayTime = 0;
         nightTime = 0;

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Shelter_Transfer : MonoBehaviour
+public class ShelterTransfer : MonoBehaviour
 {
     public string transferMapName; // ÀÌµ¿ÇÒ ¸ÊÀÇ ÀÌ¸§
     public float destinationX; // µµÂø ÁöÁ¡ x ÁÂÇ¥
