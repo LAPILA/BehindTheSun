@@ -72,7 +72,7 @@ public class CharacterController2D : MonoBehaviour
             // 캐릭터 방향 전환
             Flip();
         }
-        HandleActions();
+        //HandleActions(); esc버튼 눌렀을 때 메뉴창 띄우기 오류 수정으로 인해 잠시 주석처리 중
     }
 
     private void FixedUpdate()
@@ -107,29 +107,26 @@ public class CharacterController2D : MonoBehaviour
         }
     }
 
-    public void HandleActions()
-    {
+    //public void HandleActions()
+    //{
         
-        if (Input.GetButtonDown("Cancel"))
-        {
-            //Debug.Log("ESC설정");
-            if (menu.activeSelf)
-            {
-                menu.SetActive(false);
-            }
-            else
-            {
-                menu.SetActive(true);
-            }
-            Debug.Log("ESC설정");
-        }
-    }
+    //    if (Input.GetButtonDown("Cancel"))
+    //    {
+    //        //Debug.Log("ESC설정");
+    //        if (menu.activeSelf)
+    //        {
+    //            menu.SetActive(false);
+    //        }
+    //        else
+    //        {
+    //            menu.SetActive(true);
+    //        }
+    //        Debug.Log("ESC설정");
+    //    }
+    //}
     
 
-    public void GameExit()
-    {
-        Application.Quit();
-    }
+    
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
