@@ -10,7 +10,7 @@ public class Shelter_Transfer : MonoBehaviour
     public float destinationY; // µµÂø ÁöÁ¡ y ÁÂÇ¥
     private CharacterController2D playerController;
     private CameraFollow cameraFollow;
-    gamemanager GM;
+    private gamemanager GM;
 
     private void Start()
     {
@@ -21,7 +21,9 @@ public class Shelter_Transfer : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if(GM.laboratoy_open)
+        GM = FindObjectOfType<gamemanager>();
+
+        if (GM.laboratoy_open)
         {
             if (collision.gameObject.tag == "Player" && Input.GetKeyDown(KeyCode.C))
             {

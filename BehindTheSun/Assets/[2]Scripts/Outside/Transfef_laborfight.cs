@@ -22,6 +22,10 @@ public class Transfef_laborfight : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        playerController = FindObjectOfType<CharacterController2D>();
+        cameraFollow = FindObjectOfType<CameraFollow>();
+        GM = FindObjectOfType<gamemanager>();
+
         if (GM.fightEnd)
         {
             if (collision.gameObject.tag == "Player")

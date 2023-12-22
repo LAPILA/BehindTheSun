@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
@@ -115,6 +116,7 @@ public class gamemanager : MonoBehaviour
             Cr_HP_Value -= 3;
             poison_time = 0;
         }
+
     }
 
     void LateUpdate()
@@ -250,32 +252,80 @@ public class gamemanager : MonoBehaviour
 
     public void Repair_PickAxe()
     {
-        TB.Cr_PickAxe_Value = 100;
+        if(Stone_quantity >= 10)
+        {
+            if(Iron_quantity >= 2)
+            {
+                TB.Cr_PickAxe_Value = 100;
+                Resource.Instance.RemoveResource("µ¹", 10);
+                Resource.Instance.RemoveResource("Á¦·ÃµÈ Ã¶", 2);
+            }
+        }
     }
 
     public void Make_P_bullets()
     {
-        TB.Pistol_bullet += 10;
+        
+        if (Iron_quantity >= 3)
+        {
+            if (Coral_quantity >= 1)
+            {
+                TB.Pistol_bullet += 10;
+                Resource.Instance.RemoveResource("Á¦·ÃµÈ Ã¶", 3);
+                Resource.Instance.RemoveResource("¼®Åº", 1);
+            }
+        }
     }
 
     public void Make_A_bullets()
     {
-        TB.Shotgun_bullet += 10;
+        
+        if (Iron_quantity >= 4)
+        {
+            if (Coral_quantity >= 2)
+            {
+                TB.Shotgun_bullet += 10;
+                Resource.Instance.RemoveResource("Á¦·ÃµÈ Ã¶", 4);
+                Resource.Instance.RemoveResource("¼®Åº", 2);
+            }
+        }
     }
 
     public void Make_G_bullets()
     {
-        TB.Rifle_bullet += 10;
+        if (Iron_quantity >= 5)
+        {
+            if (Coral_quantity >= 3)
+            {
+                TB.Rifle_bullet += 10;
+                Resource.Instance.RemoveResource("Á¦·ÃµÈ Ã¶", 5);
+                Resource.Instance.RemoveResource("¼®Åº", 3);
+            }
+        }
     }
 
     public void Make_Painkiler()
     {
-        TB.Painkiller_quantity += 5;
+
+        if (Gold_quantity >= 1)
+        {
+            TB.Painkiller_quantity += 5;
+            Resource.Instance.RemoveResource("Á¦·ÃµÈ ±Ý", 1);
+        }
     }
 
     public void Make_Antibio()
     {
-        TB.Antibiotic_quantity += 3;
+        if (Gold_quantity >= 2)
+        {
+            TB.Antibiotic_quantity += 3;
+            Resource.Instance.RemoveResource("Á¦·ÃµÈ ±Ý", 2);
+        }
     }
 
+
+    public bool get_laboratory_open()
+    {
+        return laboratoy_open;
+    }
 }

@@ -27,6 +27,11 @@ public class boss : MonoBehaviour
         StartCoroutine(BossBehaviour());
     }
 
+    private void Update()
+    {
+        gameManager = FindObjectOfType<gamemanager>();
+    }
+
     IEnumerator BossBehaviour()
     {
         while (BossHp > 0) {

@@ -50,19 +50,20 @@ public class ToolBar : MonoBehaviour
 
     float MAX_PickAxe_Value = 100; // °î±ªÀÌ ÃÖ´ë ³»±¸µµ
     public float Cr_PickAxe_Value = 100; // °î±ªÀÌ ÇöÀç ³»±¸µµ
-    public float Pistol_bullet = 100; // ±ÇÃÑ ÃÑ¾Ë
-    public float Rifle_bullet = 100;
-    public float Shotgun_bullet = 100;
-    public float Painkiller_quantity = 100;
-    public float Antibiotic_quantity = 100;
-    public float Potato_quantity = 100;
-    public float Meet_quantity = 100;
-    public float Canned_Food_quantity = 100;
-    public float Antidepressants_quantity = 100;
+    public float Pistol_bullet = 10; // ±ÇÃÑ ÃÑ¾Ë
+    public float Rifle_bullet = 0;
+    public float Shotgun_bullet = 0;
+    public float Painkiller_quantity = 10;
+    public float Antibiotic_quantity = 10;
+    public float Potato_quantity = 10;
+    public float Meet_quantity = 10;
+    public float Canned_Food_quantity = 10;
+    public float Antidepressants_quantity = 10;
 
 
     void Start()
     {
+        Player_Attack = FindObjectOfType<Player_attack>();
         highlight_1.SetActive(true);
         highlight_2.SetActive(false);
         highlight_3.SetActive(false);
@@ -85,6 +86,17 @@ public class ToolBar : MonoBehaviour
         Antidepressants_Active = false;
         Rifle_Unlock = false;
         Shotgun_Unlock = false;
+        Cr_PickAxe_Value = 100; // °î±ªÀÌ ÇöÀç ³»±¸µµ
+        Pistol_bullet = 30; // ±ÇÃÑ ÃÑ¾Ë
+        Rifle_bullet = 0;
+        Shotgun_bullet = 0;
+        Painkiller_quantity = 10;
+        Antibiotic_quantity = 10;
+        Potato_quantity = 10;
+        Meet_quantity = 10;
+        Canned_Food_quantity = 10;
+        Antidepressants_quantity = 10;
+
     }
 
     void Update()

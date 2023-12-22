@@ -4,25 +4,22 @@ using UnityEngine;
 
 public class LabGo : MonoBehaviour
 {
-    private gamemanager gm;
+    public gamemanager gm;
     public GameObject go;
-    //public bool laboratoy_open = false;
+
+    public bool set;
+
+
     void Start()
     {
         gm=FindObjectOfType<gamemanager>();
-        go.SetActive(false);
     }
 
     
     void Update()
     {
-        if(gm.laboratoy_open)
-        {
-            go.SetActive(true);
-        }
-        else
-        {
-            go.SetActive(false);
-        }
+        gm = FindObjectOfType<gamemanager>();
+        set = gm.get_laboratory_open();
+        go.SetActive(set);
     }
 }

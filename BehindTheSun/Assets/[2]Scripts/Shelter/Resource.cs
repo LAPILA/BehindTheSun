@@ -18,9 +18,10 @@ public class Resource : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(gameObject);
 
+
             // 기본 자원 초기화 - 추후 제거
             foreach (string resource in defaultResources) {
-                resources.Add(resource, 300);
+                resources.Add(resource, 200);
             }
         }
         else {

@@ -22,7 +22,11 @@ public class Labolatory_fight : MonoBehaviour
 
     private void Update()
     {
-        if(monster_num <= 0)
+        GM = FindObjectOfType<gamemanager>();
+        playerController = FindObjectOfType<CharacterController2D>();
+        cameraFollow = FindObjectOfType<CameraFollow>();
+
+        if (monster_num <= 0)
         {
             GM.fightEnd = true;
             playerController.currentMapName = transferMapName;

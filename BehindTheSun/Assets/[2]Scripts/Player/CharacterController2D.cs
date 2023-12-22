@@ -1,4 +1,4 @@
-using UnityEditorInternal; // 에디터 내부 클래스 사용
+//using UnityEditorInternal; // 에디터 내부 클래스 사용
 using UnityEngine; // 유니티 엔진 클래스 사용
 using UnityEngine.SceneManagement; // 씬 관리를 위한 네임스페이스 사용
 

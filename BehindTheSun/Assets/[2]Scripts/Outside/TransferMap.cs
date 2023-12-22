@@ -19,6 +19,9 @@ public class TransferMap : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        playerController = FindObjectOfType<CharacterController2D>();
+        cameraFollow = FindObjectOfType<CameraFollow>();
+
         if (collision.gameObject.tag == "Player") {
             Debug.Log("1123æ¿¿Ãµø ¿€µø");
             playerController.currentMapName = transferMapName;
