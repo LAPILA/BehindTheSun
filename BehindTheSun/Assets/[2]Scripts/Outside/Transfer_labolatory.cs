@@ -21,15 +21,18 @@ public class Shelter_Transfer : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player" && Input.GetKeyDown(KeyCode.C) && GM.laboratoy_open)
+        if(GM.laboratoy_open)
         {
-            Debug.Log("1123æ¿¿Ãµø ¿€µø");
-            playerController.currentMapName = transferMapName;
-            Debug.Log(playerController.currentMapName);
-            playerController.destinationX = destinationX;
-            playerController.destinationY = destinationY;
-            playerController.Scene_moves = true;
-            SceneManager.LoadScene(transferMapName);
+            if (collision.gameObject.tag == "Player" && Input.GetKeyDown(KeyCode.C))
+            {
+                Debug.Log("1123æ¿¿Ãµø ¿€µø");
+                playerController.currentMapName = transferMapName;
+                Debug.Log(playerController.currentMapName);
+                playerController.destinationX = destinationX;
+                playerController.destinationY = destinationY;
+                playerController.Scene_moves = true;
+                SceneManager.LoadScene(transferMapName);
+            }
         }
     }
 }
