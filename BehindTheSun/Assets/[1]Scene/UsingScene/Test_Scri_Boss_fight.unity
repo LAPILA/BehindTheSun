@@ -3931,6 +3931,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ESCCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 2677977125289979517, guid: 361f6206647923d4f8e9e6742b190441, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2680518731526175651, guid: 361f6206647923d4f8e9e6742b190441, type: 3}
       propertyPath: m_Pivot.x
       value: 0

@@ -2294,6 +2294,7 @@ GameObject:
   - component: {fileID: 1324431615}
   - component: {fileID: 1324431614}
   - component: {fileID: 1324431616}
+  - component: {fileID: 1324431617}
   m_Layer: 12
   m_Name: TransLabor
   m_TagString: Untagged
@@ -2313,7 +2314,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f535f5fceb1b8e4bb1c8ef6f092b1f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transferMapName: Test_Scri_Laboratory
+  transferMapName: Test_Scri_Laboratory_fight
   destinationX: -6
   destinationY: -4
 --- !u!4 &1324431615
@@ -2376,6 +2377,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.9411764, y: 1.2745099}
   m_EdgeRadius: 0
+--- !u!114 &1324431617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1324431613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7225c866a8f8a594692e708b72d624d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transferMapName: Test_Scri_Laboratory
+  transferMapName2: Test_Scri_Laboratory_fight
+  destinationX: -6
+  destinationY: -4
 --- !u!1 &1475925986
 GameObject:
   m_ObjectHideFlags: 0

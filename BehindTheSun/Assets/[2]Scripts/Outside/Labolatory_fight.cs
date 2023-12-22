@@ -3,27 +3,28 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Shelter_Transfer : MonoBehaviour
+public class Labolatory_fight : MonoBehaviour
 {
     public string transferMapName; // ÀÌµ¿ÇÒ ¸ÊÀÇ ÀÌ¸§
     public float destinationX; // µµÂø ÁöÁ¡ x ÁÂÇ¥
     public float destinationY; // µµÂø ÁöÁ¡ y ÁÂÇ¥
     private CharacterController2D playerController;
     private CameraFollow cameraFollow;
-    gamemanager GM;
+    private gamemanager GM;
+    public int monster_num = 5;
 
     private void Start()
     {
+        GM = FindObjectOfType<gamemanager>();
         playerController = FindObjectOfType<CharacterController2D>();
         cameraFollow = FindObjectOfType<CameraFollow>();
-        GM = FindObjectOfType<gamemanager>();
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void Update()
     {
-        if (collision.gameObject.tag == "Player" && Input.GetKeyDown(KeyCode.C) && GM.laboratoy_open)
+        if(monster_num <= 0)
         {
-            Debug.Log("1123¾ÀÀÌµ¿ ÀÛµ¿");
+            GM.fightEnd = true;
             playerController.currentMapName = transferMapName;
             Debug.Log(playerController.currentMapName);
             playerController.destinationX = destinationX;

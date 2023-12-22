@@ -372,4 +372,9 @@ public class ToolBar : MonoBehaviour
         gameManager.shotgun_use = false;
         gameManager.rifle_use = false;
     }
+
+    public bool Get_PickAxe_Active()
+    {
+        return PickAxe_Active;
+    }
 }

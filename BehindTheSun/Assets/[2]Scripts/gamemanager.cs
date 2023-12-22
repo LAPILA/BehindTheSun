@@ -12,8 +12,11 @@ public class gamemanager : MonoBehaviour
     public DayTimer daytimer;
     public GameObject Matter_Inventory;
     public Resource Matter_resource;
+    public GameObject Crafting_Box;
+    public ToolBar TB;
 
     bool MI_Active;
+    bool CB_Active;
 
     int kill_point = 0;
 
@@ -56,12 +59,15 @@ public class gamemanager : MonoBehaviour
 
     public bool laboratoy_open = false;
     public bool hidden_ending_open = false;
+    public bool fightEnd = false;
 
 
     void Start()
     {
         MI_Active = false;
+        CB_Active = false;
         Matter_Inventory.SetActive(MI_Active);
+        Crafting_Box.SetActive(CB_Active);
 
         if (instance == null)
         {
@@ -80,6 +86,12 @@ public class gamemanager : MonoBehaviour
         {
             MI_Active = !MI_Active;
             Matter_Inventory.SetActive(MI_Active);
+        }
+
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            CB_Active = !CB_Active;
+            Crafting_Box.SetActive(CB_Active);
         }
 
         BP_Dcrease_Time += Time.deltaTime;
@@ -205,6 +217,7 @@ public class gamemanager : MonoBehaviour
         Cr_HP_Value -= 10;
     }
 
+
     public void Boss_Damaged()
     {
         Cr_HP_Value -= 20;
@@ -233,6 +246,36 @@ public class gamemanager : MonoBehaviour
     public int Return_KP()
     {
         return kill_point;
+    }
+
+    public void Repair_PickAxe()
+    {
+        TB.Cr_PickAxe_Value = 100;
+    }
+
+    public void Make_P_bullets()
+    {
+        TB.Pistol_bullet += 10;
+    }
+
+    public void Make_A_bullets()
+    {
+        TB.Shotgun_bullet += 10;
+    }
+
+    public void Make_G_bullets()
+    {
+        TB.Rifle_bullet += 10;
+    }
+
+    public void Make_Painkiler()
+    {
+        TB.Painkiller_quantity += 5;
+    }
+
+    public void Make_Antibio()
+    {
+        TB.Antibiotic_quantity += 3;
     }
 
 }

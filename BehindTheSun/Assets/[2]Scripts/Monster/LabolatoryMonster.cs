@@ -1,10 +1,13 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class MonsterMovement : MonoBehaviour
+public class LabolatoryMonster : MonoBehaviour
 {
     public ToolBar TB;
     public gamemanager gameManager;
     int Monster_HP = 40;
+    public Labolatory_fight LF;
 
     public Transform player;
     public float moveSpeed = 8f;
@@ -33,6 +36,7 @@ public class MonsterMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
         transform.Find("WatchingIcon").gameObject.SetActive(false);
+        LF = FindObjectOfType<Labolatory_fight>();
 
         InvokeRepeating(nameof(Patrol), 0f, Random.Range(minPatrolDelay, maxPatrolDelay));
         InvokeRepeating(nameof(CheckGround), 0f, 0.1f);
@@ -42,17 +46,21 @@ public class MonsterMovement : MonoBehaviour
     void Update()
     {
         FindAndAssignInstances();
-        if (player != null) {
+        if (player != null)
+        {
             float distanceToPlayer = Vector2.Distance(transform.position, player.position);
 
-            if (distanceToPlayer < 15f) {
+            if (distanceToPlayer < 15f)
+            {
                 isPlayerNearby = true;
             }
-            else {
+            else
+            {
                 isPlayerNearby = false;
             }
 
-            if (isPlayerNearby) {
+            if (isPlayerNearby)
+            {
 
                 ChasePlayer();
             }
@@ -61,16 +69,20 @@ public class MonsterMovement : MonoBehaviour
     //고쳐야할듯
     private void FindAndAssignInstances()
     {
-        if (TB == null) {
+        if (TB == null)
+        {
             ToolBar foundDayTimer = FindObjectOfType<ToolBar>();
-            if (foundDayTimer != null) {
+            if (foundDayTimer != null)
+            {
                 TB = foundDayTimer;
             }
         }
 
-        if (gameManager == null) {
+        if (gameManager == null)
+        {
             gamemanager foundGameManager = FindObjectOfType<gamemanager>();
-            if (foundGameManager != null) {
+            if (foundGameManager != null)
+            {
                 gameManager = foundGameManager;
             }
         }
@@ -80,21 +92,26 @@ public class MonsterMovement : MonoBehaviour
         transform.Find("WatchingIcon").gameObject.SetActive(true);
         isChasing = true;
 
-        if (isGrounded) {//점프
-                rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+        if (isGrounded)
+        {//점프
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
-        if (isGrounded && !isAttacking) {
+        if (isGrounded && !isAttacking)
+        {
             float distanceToPlayer = Vector2.Distance(transform.position, player.position);
-            if (distanceToPlayer <= attackRange) {
+            if (distanceToPlayer <= attackRange)
+            {
                 Attack();
             }
         }
         transform.position = Vector2.MoveTowards(transform.position, player.position, moveSpeed * Time.deltaTime);
         // 플레이어 쪽으로 방향 전환
-        if (transform.position.x < player.position.x) {
+        if (transform.position.x < player.position.x)
+        {
             transform.localScale = new Vector3(0.5f, 0.5f, 0.5f); // 플레이어의 오른쪽에 있으면 오른쪽을 보도록 설정
         }
-        else {
+        else
+        {
             transform.localScale = new Vector3(-0.5f, 0.5f, 0.5f); // 플레이어의 왼쪽에 있으면 왼쪽을 보도록 설정
         }
     }
@@ -119,12 +136,15 @@ public class MonsterMovement : MonoBehaviour
     void Patrol()
     {
         transform.Find("WatchingIcon").gameObject.SetActive(false);
-        if (!isChasing) {
-            if (Random.Range(0, 2) == 0) {
+        if (!isChasing)
+        {
+            if (Random.Range(0, 2) == 0)
+            {
                 transform.position = Vector2.MoveTowards(transform.position, new Vector2(rightBound, transform.position.y), patrolSpeed * Time.deltaTime);
                 transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
             }
-            else {
+            else
+            {
                 transform.position = Vector2.MoveTowards(transform.position, new Vector2(leftBound, transform.position.y), patrolSpeed * Time.deltaTime);
                 transform.localScale = new Vector3(-0.5f, 0.5f, 0.5f);
             }
@@ -135,23 +155,28 @@ public class MonsterMovement : MonoBehaviour
     void ChangePatrolDirection()
     {
         isChasing = false;
-        if (!isPlayerNearby) {
-            if (isJumping) {
+        if (!isPlayerNearby)
+        {
+            if (isJumping)
+            {
                 rb.velocity = new Vector2(rb.velocity.x * -1, 0);
             }
-            else {
-                if (Random.Range(0, 2) == 0) {
+            else
+            {
+                if (Random.Range(0, 2) == 0)
+                {
                     transform.position = Vector2.MoveTowards(transform.position, new Vector2(rightBound, transform.position.y), patrolSpeed * Time.deltaTime);
                     transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
                 }
-                else {
+                else
+                {
                     transform.position = Vector2.MoveTowards(transform.position, new Vector2(leftBound, transform.position.y), patrolSpeed * Time.deltaTime);
                     transform.localScale = new Vector3(-0.5f, 0.5f, 0.5f);
                 }
             }
         }
         Invoke(nameof(ChangePatrolDirection), Random.Range(minPatrolDelay, maxPatrolDelay));
-        
+
     }
 
     void ResetJump()
@@ -193,8 +218,7 @@ public class MonsterMovement : MonoBehaviour
         if (Monster_HP <= 0)
         {
             TB.Meet_quantity += 3;
-            TB.Painkiller_quantity += 3;
-
+            LF.monster_num--;
 
             Destroy(gameObject);
         }

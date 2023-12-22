@@ -42,6 +42,9 @@ EditorBuildSettings:
     path: Assets/[1]Scene/UsingScene/Test_Scri_Village.unity
     guid: 1fe1f169a75781e4aae0fac714455526
   - enabled: 1
+    path: Assets/[1]Scene/UsingScene/Test_Scri_Laboratory_fight.unity
+    guid: 3bb6a4ffc2e0dc8498c39faa3c2bbc0e
+  - enabled: 1
     path: Assets/[1]Scene/UsingScene/Test_Scri_Laboratory.unity
     guid: 399761e549503dd44b38fc70f0a16715
   - enabled: 0

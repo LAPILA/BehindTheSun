@@ -151,6 +151,8 @@ public class MonsterPlayer : MonoBehaviour
                 TB.Shotgun_bullet += 12;
             }
 
+            TB.Antibiotic_quantity += 3;
+
             Destroy(gameObject);
         }
     }

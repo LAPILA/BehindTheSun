@@ -23,7 +23,7 @@ public class TreeGet : MonoBehaviour
                 attackCount++;
             }
             else {
-                RandomTree = Random.Range(1, 10); // 랜덤한 나무 개수 설정
+                RandomTree = Random.Range(4, 10); // 랜덤한 나무 개수 설정
                 Resource.Instance.AddResource("나무", RandomTree);
                 StartCoroutine(ShakeObject(initialPosition, 0.1f, 0.05f, 0.05f, 0.2f));
                 attackCount = 0;

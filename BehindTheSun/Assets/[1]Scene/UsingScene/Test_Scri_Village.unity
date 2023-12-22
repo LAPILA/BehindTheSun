@@ -5764,17 +5764,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0119d8df99437254d922a4824943d2ec, type: 3}
---- !u!114 &1719078806 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1343897000546696930, guid: 0119d8df99437254d922a4824943d2ec, type: 3}
-  m_PrefabInstance: {fileID: 1719078805}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1691b0776613f94b8eaed7e7c425451, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1790334910
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5794,7 +5783,7 @@ PrefabInstance:
     - target: {fileID: 1612634330628265981, guid: 361f6206647923d4f8e9e6742b190441, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1719078806}
+      objectReference: {fileID: 0}
     - target: {fileID: 1612634330628265981, guid: 361f6206647923d4f8e9e6742b190441, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -5814,6 +5803,10 @@ PrefabInstance:
     - target: {fileID: 2677977125289979517, guid: 361f6206647923d4f8e9e6742b190441, type: 3}
       propertyPath: m_Name
       value: ESCCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 2677977125289979517, guid: 361f6206647923d4f8e9e6742b190441, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2680518731526175651, guid: 361f6206647923d4f8e9e6742b190441, type: 3}
       propertyPath: m_Pivot.x
